@@ -1,0 +1,12 @@
+{
+  "name": "AL’s Folio",
+  "description": "Portfolio site",
+  "url": "https://www.audiliew.com",
+  "domain": "https://www.audiliew.com",
+  "author": {
+    "name": "AL"
+  },
+  "path": {
+    "img": "/assets/img/"
+  }
+}

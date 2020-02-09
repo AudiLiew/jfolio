@@ -1,0 +1,32 @@
+---
+layout: default
+---
+<header>
+  <h1>{{ title }}</h1>
+  <div class="post-meta">
+    <p class="post-meta__date">
+      Published: <time datetime="{{ date }}">{{ date | dateDisplay }}</time>
+      {# <time datetime="{% if mod_date %}{{ mod_date }}{% else  %}{{ date }}{% endif %}">{% if mod_date %}{{ mod_date | dateDisplay }}{% else  %}{{ date | dateDisplay }}{% endif %}</time> #}
+    </p>
+    {% if mod_date %}
+    <p class="meta__dateUpdated">Updated: <time datetime="{{ mod_date }}">{{ mod_date | dateDisplay }}</time></p>        
+    {% endif %}
+  {% if heroImg %}
+    <img src="{{ site.path.img }}{{ heroImg }}" alt="{{ heroAlt }}">
+  {% endif %}
+  </div>
+</header>
+<div class="post-content">
+  {{ content | safe }}
+
+  {# author card #}
+  {# {% include "../components/author.njk" %} #}
+</div>
+{# Tags #}
+{# {% if tags %}
+  {% for tag in tags %}
+    {% if tag != "posts" %}
+    <a href="/{{ tag }}">{{ tag | capitalize }}</a>
+    {% endif %}
+  {% endfor %}
+{% endif %} #}

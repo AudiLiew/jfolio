@@ -1,0 +1,15 @@
+.mainFooter {
+  margin-top: 50px;
+  margin-bottom: 55px;
+  font-size: 0.8rem;
+
+  .container {
+    display: flex;
+    justify-content: center;
+  }
+
+  &__copyright {
+    margin-right: 15px;
+  }
+
+}

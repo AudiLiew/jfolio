@@ -1,0 +1,25 @@
+<nav>
+<ul id="navbar-menu" class="navbar-menu">
+  {% for item in navigation.main %}
+    <li class="navbar-menu__item{% if item.child %} has-dropdown is-hoverable{% endif %}">
+      <a href="{{ item.url | safe }}"{% if page.url == item.url %} class="is-active"{% endif %}{% if item.child %} data-toggle="dropdown"{% endif %}>
+        {{ item.label }}
+        {% if item.child %}
+          <span class="navbar-dropdown-arrow"></span>
+        {% endif %}
+      </a>
+      {% if item.child %}
+        <ul class="navbar-dropdown">
+          {% for itemChild in item.child %}
+            <li>
+              <a href="{{ itemChild.url |safe }}" class="{% if page.url == itemChild.url %}is-active{% endif %}">
+                {{ itemChild.label }}
+              </a>
+            </li>
+          {% endfor %}
+        </ul>
+      {% endif %}
+    </li>
+  {% endfor %}
+</ul>
+</nav>

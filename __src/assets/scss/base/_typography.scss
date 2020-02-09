@@ -1,0 +1,95 @@
+html {
+  @include fullhd {
+    font-size: 18px;
+  }
+}
+
+body {
+  font-family: 'Merriweather', serif;
+  line-height: 1.85rem;
+  font-weight: 300;
+  font-size: 1.1rem;
+  background-color: $bodyBg;
+  color: $bodyText;
+}
+
+h1, h2, h3, h4, h5 {
+  // font-family: 'Merriweather', serif;
+  font-weight: bold;
+}
+
+h1 {
+  font-size: 2.8rem;
+  font-weight: 800;
+  line-height: 3.2rem;
+  margin-top: 0;
+  margin-bottom: 0.9rem;
+  margin-bottom: 4px;
+}
+
+h2 {
+  margin-top: 1.9rem;
+  margin-bottom: 0;
+  font-size: 1.6rem;
+  line-height: 2.2rem;
+  font-weight: 800;
+}
+
+h3 {
+  margin-top: 1.5rem;
+  margin-bottom: 0;
+}
+
+h4 {
+  margin-bottom: 0;
+}
+
+h5 {
+  margin-top: 1rem;
+  margin-bottom: 0;
+  font-size: 1.1rem;
+}
+
+p {
+  margin-top: 0.6rem;
+  margin-bottom: 0;
+
+  h5 + & {
+    margin-top: 0;
+  }
+}
+
+a {
+  color: $link;
+  text-decoration: none;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+table {
+  margin-top: 1rem;
+  background-color: gray('800');
+}
+
+thead {
+  text-align: left;
+}
+
+th, td {
+  padding: 5px 15px;
+}
+
+th {
+  border-bottom: 1px solid $borderColour;
+}
+
+figcaption {
+  font-size: 0.8rem;
+  line-height: 1.4rem;
+}
+
+sup {
+  font-size: 0.6rem;
+}

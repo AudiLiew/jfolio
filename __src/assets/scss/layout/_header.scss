@@ -1,0 +1,25 @@
+.#{$mainHeader} {
+  position: fixed;
+  top: 0;
+  left: 0;
+  
+  width: 100%;
+  z-index: 990;
+  //flex-direction: column;
+  will-change: transform;
+  transition: transform 250ms ease-in-out, background-color 250ms ease-in;
+  
+  &--pinned {
+    background-color: $headerBg;
+    box-shadow: 0 0px 7px 2px rgba($headerShadow, 0.7);
+  }
+  
+  &--unpinned {
+    background-color: $headerBg;
+    transform: translateY(-100%);
+  }
+
+  .container {
+    display: flex;
+  }
+}
