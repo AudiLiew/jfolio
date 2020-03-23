@@ -33,13 +33,34 @@ module.exports = eleventyConfig => {
     return '<a href="'+ url +'" target="_blank" rel="noopener">'+ name +'</a>';
   });
 
-  // Shortcode for External links
-  eleventyConfig.addShortcode("img", (url, caption = "") => {
-    if (caption != "") {
-      return '<figure><img src="' + url + '"><figcaption>' + caption + '</figcaption></figure>';
-    } else {
-      return '<figure><img src="' + url + '"></figure>';
+  // Shortcode for single image with captions
+  eleventyConfig.addNunjucksShortcode("img", (img) => {
+
+    let marginBottomClass = (img.haveMarginBottom == undefined) ? "" : "noMarginBottom";
+    let newFigure;
+
+    newFigure = '<figure class="'+ marginBottomClass +'">';  // default haz margin bottom
+
+    if (img.caption != "") {
+      newFigure += '<figcaption>' + img.caption + '</figcaption><img src="' + img.src + '">';
+    } else { // no caption
+      newFigure += '<img src="' + img.src + '">';
     }
+
+    newFigure += '</figure>';
+
+    return newFigure;
+  });
+  
+  // Shortcode for two column images with captions
+  eleventyConfig.addShortcode("testo", (urls) => {
+    let allUrls = "";
+
+    for (url of urls) {
+      allUrls += "<p>" + url + "</p>"
+    }
+
+    return allUrls;
   });
 
   // Get year for copyright

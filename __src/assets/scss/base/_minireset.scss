@@ -14,7 +14,15 @@ img {
 }
 
 figure {
-  margin: 1.6rem 0;
+  margin: 1.6rem 0 4.5rem;
+
+  &.noMarginBottom {
+    margin-bottom: 0;
+  }
+
+  img {
+    border: 1px solid gray('300');
+  }
 }
 
 ol, ul {
