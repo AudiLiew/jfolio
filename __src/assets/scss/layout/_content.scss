@@ -3,15 +3,16 @@
 // }
 
 .container {
-  background-color: $mask;
-  max-width: $contentWidth-normal;
+  // background-color: $mask;
   margin: 0 auto;
   padding: 1em 2em;
-
+  
   @include desktop {
-    padding-left: 0;
-    padding-right: 0;
-    //max-width: $contentWidth-widescreen;
+    // padding-left: 0;
+    // padding-right: 0;
+    max-width: $contentWidth-normal;
+    padding-left: 5rem;
+    padding-right: 5rem;
   }
 
   @include fullhd {
