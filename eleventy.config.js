@@ -33,6 +33,15 @@ module.exports = eleventyConfig => {
     return '<a href="'+ url +'" target="_blank" rel="noopener">'+ name +'</a>';
   });
 
+  // Shortcode for External links
+  eleventyConfig.addShortcode("img", (url, caption = "") => {
+    if (caption != "") {
+      return '<figure><img src="' + url + '"><figcaption>' + caption + '</figcaption></figure>';
+    } else {
+      return '<figure><img src="' + url + '"></figure>';
+    }
+  });
+
   // Get year for copyright
   eleventyConfig.addShortcode("showfullyear", (emptyVariableForThisToWork) => {
     let nowNow = new Date();

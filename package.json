@@ -1,7 +1,7 @@
 {
   "name": "jfolio",
   "version": "1.0.0",
-  "description": "Website for Jain's Folio",
+  "description": "Website for Folio",
   "private": true,
   "author": "Audi Liew",
   "scripts": {
@@ -49,6 +49,7 @@
     "postcss-import": "^12.0.1",
     "postcss-loader": "^3.0.0",
     "postcss-preset-env": "^6.7.0",
+    "rellax": "^1.12.1",
     "rimraf": "^3.0.1",
     "sass-loader": "^8.0.2",
     "style-loader": "^1.1.3",
