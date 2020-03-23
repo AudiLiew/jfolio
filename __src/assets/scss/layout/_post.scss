@@ -24,42 +24,37 @@
 $postHeader: 'post-header';
 .#{$postHeader} {
   
-  @include desktop {
-    display: flex;
-    justify-content: space-between;
+  @include tablet {
+    margin-top: 1.6rem;
+  } 
 
+  @include desktop {
     &--noIntro {
       display: block;
-
-      & .#{$postHeader}__title {
-        width: 100%;
-      }
     }
   } // desktop
 
+  &-titlewrap {
+    text-align: center;
+  }
+
   &__title {
-    margin-bottom: 2rem;
-
-    @include desktop {
-      width: 46%;
-      order: 2;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-
-      margin-bottom: 0;
-    }
-    p {
-      margin-top: 0;
-    }
+    font-weight: 400;
+    font-size: 2.6rem;
+    line-height: 3rem;
   } // title
+  
+  &__type {
+    font-weight: 300;
+    font-style: italic;
+    font-size: 1.8rem;
+    line-height: 2.3rem;
+    margin-top: 0;
+    margin-bottom: 2rem;
+  }
 
-  &__intro {
-    @include desktop {
-      width: 46%;
-      p {
-        margin-top: 0;
-      }
-    }
+  &-introwrap {
+    max-width: 660px;
+    margin: 0 auto 5rem;
   }
 }
