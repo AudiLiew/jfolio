@@ -36,10 +36,11 @@ module.exports = eleventyConfig => {
   // Shortcode for single image with captions
   eleventyConfig.addNunjucksShortcode("img", (img) => {
 
-    let marginBottomClass = (img.marginBottom == undefined) ? "" : "noMarginBottom";
+    let shortClass = (img.short == undefined) ? "" : (img.short) ? "isShort" : "";
+    let marginBottomClass = (img.marginBottom == undefined) ? "" : " noMarginBottom";
     let newFigure;
 
-    newFigure = '<figure class="'+ marginBottomClass +'">';  // default haz margin bottom
+    newFigure = '<figure class="'+ shortClass + marginBottomClass +'">';  // default haz margin bottom
 
     if (img.caption != "") {
       newFigure += '<figcaption>' + img.caption + '</figcaption><img src="' + img.src + '">';

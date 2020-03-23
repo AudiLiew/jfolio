@@ -16,6 +16,21 @@
   }
 }
 
+figure {
+  margin: 1.6rem 0 4.5rem;
+
+  &.isShort {
+    @include tablet {
+      width: 49%;
+      margin: 0 auto;
+    }
+  }
+
+  img {
+    display: block;
+  }
+}
+
 $stack: "stack";
 
 .#{stack} {
