@@ -1,9 +1,9 @@
-.mainContent {
-  margin-top: 8rem;
-}
+// .mainContent {
+//   // margin-top: 8rem;
+// }
 
 .container {
-  //background-color: $mask;
+  background-color: $mask;
   max-width: $contentWidth-normal;
   margin: 0 auto;
   padding: 1em 2em;
@@ -16,12 +16,5 @@
 
   @include fullhd {
     max-width: $contentWidth-fullhd;
-  }
-}
-
-.posts-list {
-  &__date {
-    margin-left: 5px;
-    font-size: .8rem;
   }
 }

@@ -1,5 +1,5 @@
 {
-  "name": "AL’s Folio",
+  "name": "Folio",
   "description": "Portfolio site",
   "url": "https://www.audiliew.com",
   "domain": "https://www.audiliew.com",
@@ -8,5 +8,10 @@
   },
   "path": {
     "img": "/assets/img/"
+  },
+  "names": {
+    "image": {
+      "hero": "hero.jpg"
+    }
   }
 }

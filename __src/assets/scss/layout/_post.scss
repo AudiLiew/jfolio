@@ -1,74 +1,65 @@
-.post {
+.hero {
+  position: relative;
+  height: 45vh;
+
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+
+  @include desktop {
+    height: 65vh;
+    min-height: 550px;
+  }
 
   img {
-    padding: 1rem 0;
+    display: none;
   }
+}
 
-  &-meta {
-    //display: flex;
-    //align-items: center;
-    //justify-content: center;
-    text-align: center;
-    //margin-top: 20px;
-    margin-bottom: 37px;
+.post-wrap {
+  position: relative;
+  background-color: $pageColour;
+}
 
-    p {
-      margin: 0 0 16px;
-      font-size: 0.85rem;
-      font-weight: 300;
+$postHeader: 'post-header';
+.#{$postHeader} {
+  
+  @include desktop {
+    display: flex;
+    justify-content: space-between;
+
+    &--noIntro {
+      display: block;
+
+      & .#{$postHeader}__title {
+        width: 100%;
+      }
     }
-  } // meta
+  } // desktop
 
-  // &-lede {
-    // font-size: 1.1rem;
-    // line-height: 1.7rem;
-  // } // lede
-
-  &-toc {
-    margin: 50px auto;
-    max-width: 460px;
-
-    &__header {
-      margin-bottom: 1rem;
-      padding-bottom: 15px;
-      font-size: 1.2rem;
-      line-height: 1.7rem;
-      font-weight: bold;
-      text-align: center;
-      border-bottom: 1px solid gray('200');
-    }
-
-    ul {
-      list-style: none;
-      padding: 0;
-      margin: 0;
-    }
-    
-    li {
-      padding: 6px 0;
-    }
-
-  } // toc
- 
-
-  &-bignote {
-    font-size: 1.5rem;
-    line-height: 2.2rem;
-    padding: 1rem 2rem;
+  &__title {
+    margin-bottom: 2rem;
 
     @include desktop {
-      padding-left: 4rem;
-      padding-right: 4rem;
+      width: 46%;
+      order: 2;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+
+      margin-bottom: 0;
     }
-  }
+    p {
+      margin-top: 0;
+    }
+  } // title
 
-  &-notes {
-    margin-top: 2rem;
-    font-size: .8rem;
-    line-height: 1.2rem;
-  }
-
-  &-break {
-    margin-top: 3rem;
+  &__intro {
+    @include desktop {
+      width: 46%;
+      p {
+        margin-top: 0;
+      }
+    }
   }
 }

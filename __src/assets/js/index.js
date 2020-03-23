@@ -2,6 +2,7 @@ import "../scss/main.scss";
 import terminal from "./components/terminal";
 import { gsap } from "gsap";
 import debounce from 'lodash.debounce';
+import Rellax from "rellax";
 
 (function(){
   //terminal("¯\\_(ツ)_/¯");
@@ -21,6 +22,7 @@ import debounce from 'lodash.debounce';
     mainHeader: "mainHeader",
     mainHeaderPinned: "mainHeader--pinned", 
     mainHeaderUnpinned: "mainHeader--unpinned",
+    bannerParallax: "bannerParallax",
   };
 
   const DOM = {
@@ -208,6 +210,23 @@ import debounce from 'lodash.debounce';
     
   };
 
+  const setupParrallax = () => {
+    let banner = document.querySelector("." + NAMES.bannerParallax);
+
+    if (banner != null || banner != undefined) {
+      let bannerParallax = new Rellax('.' + NAMES.bannerParallax, {
+        speed: -5,
+        center: false,
+        wrapper: null,
+        round: true,
+        vertical: true,
+        horizontal: false
+      });
+    }
+    
+  };
+
   Init();
+  setupParrallax();
 
 })(); // Fin  

@@ -13,6 +13,10 @@
   {% endif %}
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
   <link rel="canonical" href="{{ site.url }}{{ page.url }}">
+
+  <link rel="dns-prefetch" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
+
   <link rel="stylesheet" href="/assets/main.css">
 
   {# <link rel="icon" type="image/png" href="{{ site.images.favicon }}"> #}
@@ -26,13 +30,13 @@
     gtag('js', new Date());
     gtag('config', 'UA-153847073-1');
   </script> #}
+  <link href="https://fonts.googleapis.com/css?family=Carter+One|Open+Sans:300,400&display=swap" rel="stylesheet">
 </head>
 <body{% if body_id %} id="{{ body_id }}"{% endif %}>
   {# include header #}
   {% include "../components/header.njk" %}
   <main class="mainContent" data-barba="wrapper">
-    <div class="container{% if tags %}{% if "posts" in tags %} post{% endif %}{% endif %}" data-barba="container">
-      {# content #}
+    <div class="{% if tags %}{% if "posts" in tags %} post{% endif %}{% endif %}" data-barba="container">
       {{ content | safe }}
     </div>
   </main>

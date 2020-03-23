@@ -1,8 +1,11 @@
 //_____________________________________________________
 // Names
 //_____________________________________________________
-$mainHeader: "mainHeader";
+$mainHeader:  "mainHeader";
 
+$bodyType:    'Open Sans', sans-serif;
+$titleType:   'Open Sans', sans-serif;
+$headerType:  'Open Sans', sans-serif;
 //_____________________________________________________
 // Sizes 
 //_____________________________________________________
@@ -11,9 +14,9 @@ $headerSizes: (
   "widescreen": 23rem
 );
 //$maxWidth: 890px;
-$contentWidth-normal: 710px; //680px;
-$contentWidth-widescreen: 710px;
-$contentWidth-fullhd: 780px;
+$contentWidth-normal: 880px; //680px;
+//$contentWidth-widescreen: 710px;
+$contentWidth-fullhd: 1080px;
 
 // The container horizontal gap, which acts as the offset for breakpoints
 $gap: 32px;
@@ -79,6 +82,7 @@ $teal:      #20c997;
 $cyan:      #17a2b8;
 $maskRed:   rgba(#FFB7B7, .5);
 $mask:      rgba($black, .2);
+$mask:      $maskRed;
 
 $colors: ();
 $colors: map-merge((
@@ -103,11 +107,11 @@ $colors: map-merge((
   "gray-dark":  $gray-800
 ), $colors);
 
-$bodyBg:        $blackAndBlue;
-$bodyText:      $clayGray;
+$bodyBg:        $gray-100;
+$bodyText:      $blackAndBlue;
 
-$headerBg:      darken($bodyBg, 2%); //$darkBlue;
-$headerShadow:  $gray-900;
+$headerBg:      $white; //$darkBlue;
+$headerShadow:  $gray-400;
 
 $mainNavLink:   $bodyText;
 $mainNavHoverBg:  lighten($headerBg, 10%);
@@ -115,3 +119,4 @@ $mainNavHoverBg:  lighten($headerBg, 10%);
 $link: $mondayBlue;
 
 $borderColour:  $gray-700;
+$pageColour:    $white;
