@@ -36,7 +36,7 @@ module.exports = eleventyConfig => {
   // Shortcode for single image with captions
   eleventyConfig.addNunjucksShortcode("img", (img) => {
 
-    let marginBottomClass = (img.haveMarginBottom == undefined) ? "" : "noMarginBottom";
+    let marginBottomClass = (img.marginBottom == undefined) ? "" : "noMarginBottom";
     let newFigure;
 
     newFigure = '<figure class="'+ marginBottomClass +'">';  // default haz margin bottom
@@ -52,15 +52,35 @@ module.exports = eleventyConfig => {
     return newFigure;
   });
   
-  // Shortcode for two column images with captions
-  eleventyConfig.addShortcode("testo", (urls) => {
-    let allUrls = "";
+  // Shortcode for two/three column images with captions
+  eleventyConfig.addNunjucksShortcode("imgstack", (imgstack) => {
+    const stackName = "stack";
+    const stackItemName = stackName + "__item";
+    let marginClass = (imgstack.margin == undefined) ? "" : " noMarginTopBottom";
+    let newFigure, columnClass = stackName + " " + stackName;
 
-    for (url of urls) {
-      allUrls += "<p>" + url + "</p>"
+    switch (imgstack.columns) {
+      case 3:
+        columnClass += "--three";
+        break;
+      case 2:
+      default:
+        columnClass += "--two";
     }
 
-    return allUrls;
+    newFigure = '<figure class="'+ columnClass + marginClass +'">';  // default haz margin bottom
+
+    if (imgstack.caption != undefined) {
+      newFigure += '<figcaption>' + imgstack.caption + '</figcaption>';
+    } 
+    
+    for (img of imgstack.src) {
+      newFigure += '<img src="' + img + '" class="' + stackItemName + '">';
+    }
+
+    newFigure += '</figure>';
+
+    return newFigure;
   });
 
   // Get year for copyright
