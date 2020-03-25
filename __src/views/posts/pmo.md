@@ -1,11 +1,11 @@
 ---
+title: "Prime Minister’s Office"
+projectType: 'Invitation Cards'
+projectIntro: 'This is intro Culpa voluptatem optio ipsam quisquam maxime nihil nisi reprehenderit nam labore quo animi, autem adipisci explicabo fugit exercitationem deserunt nobis minima magni tempora eum est aliquid. Reiciendis accusamus nam voluptatum dicta tenetur'
 code: 'pmo'
 permalink: /pmo/ #false #
-title: 'Some six'
-projectType: 'Greeting Cards'
-projectIntro: 'This is intro Culpa voluptatem optio ipsam quisquam maxime nihil nisi reprehenderit nam labore quo animi, autem adipisci explicabo fugit exercitationem deserunt nobis minima magni tempora eum est aliquid. Reiciendis accusamus nam voluptatum dicta tenetur'
 date: 2020-02-04
-heroImg: 'hero.png'
+heroImg: 'hero.jpg'
 #mod_date: 2020-01-01
 is_short: true
 tags: 
@@ -13,10 +13,10 @@ tags:
 changefreq: monthly
 ---
 
-## Much
+{% img src=site.path.img + code + "/pmo-1.jpg", caption="Line drawing of the Istana - Used on stationery and PMO’s prepaid stamp", border=false %}
+{% img src=site.path.img + code + "/pmo-2.jpg", caption="2015 Lunar New Year reception invite", marginBottom=false %}
+{% img src=site.path.img + code + "/pmo-3.jpg", caption="", marginBottom=false %}
+{% img src=site.path.img + code + "/pmo-4.jpg", caption="" %}
 
-Lorem ipsum dolor sit amet consectetur, adipisicing elit. Velit exercitationem quo eos unde atque nesciunt voluptatem, fuga pariatur minima eum nam accusantium soluta, quod dolore ab deserunt eaque at hic.
-
-Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nihil necessitatibus quae repudiandae tenetur ut vel et amet, sint cumque sequi, nemo fugit reiciendis. Facilis, pariatur neque sapiente voluptates ratione sit voluptate minima libero ullam culpa alias facere vitae repellendus fugit debitis tempora voluptatibus, mollitia iste odio perferendis. Culpa voluptatem optio ipsam quisquam maxime nihil nisi reprehenderit nam labore quo animi, autem adipisci explicabo fugit exercitationem deserunt nobis minima magni tempora eum est aliquid. Reiciendis accusamus nam voluptatum dicta tenetur, harum sapiente libero quaerat error amet rem. Doloremque nobis, facere sit porro quibusdam mollitia veritatis laboriosam consectetur doloribus, sunt quae neque.
-
-Lorem ipsum dolor, sit amet consectetur adipisicing elit. Officia rerum ipsa maiores architecto eaque placeat. Voluptas, officia adipisci, cum magni nihil dolor cupiditate reprehenderit eius obcaecati eligendi sit aliquam expedita pariatur ut architecto? Vitae, sunt tempora quam quibusdam doloribus officia nulla ducimus distinctio maxime et inventore nostrum veritatis optio debitis.
+{% img src=site.path.img + code + "/pmo-5.jpg", caption="2016 Lunar New Year reception invite", marginBottom=false %}
+{% img src=site.path.img + code + "/pmo-6.jpg", caption="" %}
