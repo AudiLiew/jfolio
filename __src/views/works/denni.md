@@ -3,7 +3,7 @@ title: 'Denni'
 projectType: 'Corporate Identity'
 projectIntro: 'This is intro Culpa voluptatem optio ipsam quisquam maxime nihil nisi reprehenderit nam labore quo animi, autem adipisci explicabo fugit exercitationem deserunt nobis minima magni tempora eum est aliquid. Reiciendis accusamus nam voluptatum dicta tenetur'
 code: 'denni'
-permalink: /denni/ #false #
+# permalink: denni #false #
 date: 2020-02-04
 heroImg: 'hero.jpg'
 #mod_date: 2020-01-01
@@ -12,7 +12,7 @@ eleventyNavigation:
   key: Denni
   order: 1
 tags: 
-  - website
+  - works
 changefreq: monthly
 ---
 

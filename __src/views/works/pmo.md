@@ -9,7 +9,7 @@ heroImg: 'hero.jpg'
 #mod_date: 2020-01-01
 is_short: true
 tags: 
-  - website
+  - works
 changefreq: monthly
 eleventyNavigation:
   key: PMO
