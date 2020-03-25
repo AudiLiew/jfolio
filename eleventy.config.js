@@ -73,7 +73,8 @@ module.exports = eleventyConfig => {
             ],
             caption = "elit exercitationem quo eos",
             columns = 3,
-            margin = false
+            margin = false,
+            border = true 
       %}
 
       {% imgstack src = [
@@ -88,6 +89,7 @@ module.exports = eleventyConfig => {
     const stackName = "stack";
     const stackItemName = stackName + "__item";
     let marginClass = (imgstack.margin == undefined) ? "" : " noMarginTopBottom";
+    let borderClass = (imgstack.border == undefined) ? "" : (imgstack.border) ? " border" : "";
     let newFigure, columnClass = stackName + " " + stackName;
 
     switch (imgstack.columns) {
@@ -106,7 +108,7 @@ module.exports = eleventyConfig => {
     } 
     
     for (img of imgstack.src) {
-      newFigure += '<img src="' + img + '" class="' + stackItemName + '">';
+      newFigure += '<img src="' + img + '" class="' + stackItemName + borderClass + '">';
     }
 
     newFigure += '</figure>';
