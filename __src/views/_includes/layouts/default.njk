@@ -32,7 +32,7 @@
   </script> #}
   <link href="https://fonts.googleapis.com/css?family=Carter+One|Open+Sans:300,400&display=swap" rel="stylesheet">
 </head>
-<body{% if body_id %} id="{{ body_id }}"{% endif %}>
+<body{% if body_id %} id="{{ body_id }}"{% endif %}{% if body_class %} class="{{ body_class }}"{% endif %}>
   {# include header #}
   {% include "../components/header.njk" %}
   <main class="mainContent" data-barba="wrapper">
