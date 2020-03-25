@@ -1,3 +1,5 @@
+const eleventyNavigationPlugin = require("@11ty/eleventy-navigation");
+
 module.exports = eleventyConfig => {
   const htmlmin = require("html-minifier");
   const markdownIt = require("markdown-it");
@@ -14,6 +16,9 @@ module.exports = eleventyConfig => {
 
   let markdownLib = markdownIt(options).use(markdownItAttrs);
   
+  
+  eleventyConfig.addPlugin(eleventyNavigationPlugin);
+
   eleventyConfig.setLibrary("md", markdownLib);
 
   // Add a readable date formatter filter to Nunjucks

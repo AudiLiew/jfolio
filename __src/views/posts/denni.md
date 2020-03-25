@@ -8,6 +8,9 @@ date: 2020-02-04
 heroImg: 'hero.jpg'
 #mod_date: 2020-01-01
 is_short: true
+eleventyNavigation:
+  key: Denni
+  order: 1
 tags: 
   - website
 changefreq: monthly
