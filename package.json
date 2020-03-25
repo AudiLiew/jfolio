@@ -12,7 +12,7 @@
     "start:webpack": "webpack-dev-server --config webpack.dev.js --hot",
     "preview": "run-p preview:**",
     "preview:webpack": "npm run start:webpack",
-    "prebuild": "rimraf docs",
+    "clean": "rimraf docs",
     "build": "npm run build:webpack && npm run build:11ty",
     "build:11ty": "cross-env ELEVENTY_ENV=production eleventy --config=eleventy.config.js",
     "build:webpack": "cross-env NODE_ENV=production webpack --config webpack.prod.js"
