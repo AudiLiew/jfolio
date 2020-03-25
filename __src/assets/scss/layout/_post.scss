@@ -77,8 +77,8 @@ $stack: "stack";
 .post-wrap {
   position: relative;
   background-color: $pageColour;
-  
-  img {
+    
+  .border {
     border: 1px solid gray('300');
   }
 }
