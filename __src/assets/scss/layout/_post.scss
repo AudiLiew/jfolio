@@ -1,74 +1,122 @@
-.post {
+.hero {
+  position: relative;
+  height: 45vh;
+
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+
+  @include desktop {
+    height: 65vh;
+    min-height: 550px;
+  }
 
   img {
-    padding: 1rem 0;
+    display: none;
+  }
+}
+
+figure {
+  margin: 1.6rem 0 4.5rem;
+
+  &.isShort {
+    @include tablet {
+      width: 49%;
+      margin: 0 auto;
+    }
   }
 
-  &-meta {
-    //display: flex;
-    //align-items: center;
-    //justify-content: center;
-    text-align: center;
-    //margin-top: 20px;
-    margin-bottom: 37px;
+  img {
+    display: block;
+  }
+}
 
-    p {
-      margin: 0 0 16px;
-      font-size: 0.85rem;
-      font-weight: 300;
-    }
-  } // meta
+$stack: "stack";
 
-  // &-lede {
-    // font-size: 1.1rem;
-    // line-height: 1.7rem;
-  // } // lede
+.#{stack} {
+  
+  margin-bottom: 5rem;
 
-  &-toc {
-    margin: 50px auto;
-    max-width: 460px;
+  &--nomargin {
+    margin-top: 0;
+    margin-bottom: 0;
+  }
 
-    &__header {
-      margin-bottom: 1rem;
-      padding-bottom: 15px;
-      font-size: 1.2rem;
-      line-height: 1.7rem;
-      font-weight: bold;
-      text-align: center;
-      border-bottom: 1px solid gray('200');
-    }
-
-    ul {
-      list-style: none;
-      padding: 0;
-      margin: 0;
-    }
+  &__item {
+    margin-bottom: 2rem;
+  }
+  
+  @include tablet {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
     
-    li {
-      padding: 6px 0;
+    figcaption {
+      width: 100%;
     }
 
-  } // toc
- 
+    &__item {
+      margin-bottom: 2%;
 
-  &-bignote {
-    font-size: 1.5rem;
-    line-height: 2.2rem;
-    padding: 1rem 2rem;
+      .#{stack}--two & {
+        width: 49%;
+      }
 
-    @include desktop {
-      padding-left: 4rem;
-      padding-right: 4rem;
+      .#{stack}--three & {
+        width: 32%;
+      }
     }
+
   }
 
-  &-notes {
-    margin-top: 2rem;
-    font-size: .8rem;
-    line-height: 1.2rem;
+  img {
+    display: block;
+  }
+}
+
+.post-wrap {
+  position: relative;
+  background-color: $pageColour;
+    
+  .border {
+    border: 1px solid gray('300');
+  }
+}
+
+$postHeader: 'post-header';
+.#{$postHeader} {
+  
+  @include tablet {
+    margin-top: 1.6rem;
+  } 
+
+  @include desktop {
+    &--noIntro {
+      display: block;
+    }
+  } // desktop
+
+  &-titlewrap {
+    text-align: center;
   }
 
-  &-break {
-    margin-top: 3rem;
+  &__title {
+    font-weight: 400;
+    font-size: 2.6rem;
+    line-height: 3rem;
+  } // title
+  
+  &__type {
+    font-weight: 300;
+    font-style: italic;
+    font-size: 1.8rem;
+    line-height: 2.3rem;
+    margin-top: 0;
+    margin-bottom: 2rem;
+  }
+
+  &-introwrap {
+    max-width: 660px;
+    margin: 0 auto 5rem;
   }
 }
