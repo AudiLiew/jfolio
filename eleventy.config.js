@@ -154,6 +154,7 @@ module.exports = eleventyConfig => {
   eleventyConfig.addLayoutAlias('post', 'layouts/post.njk')
 
   return {
+    pathPrefix : "/jfolio/",
     templateFormats: ["njk", "md"],
     markdownTemplateEngine: 'njk',
     htmlTemplateEngine: 'njk',
