@@ -19,3 +19,11 @@
     max-width: $contentWidth-fullhd;
   }
 }
+
+.work-wrap {
+  margin-top: 80px;
+
+  @include tablet {
+    margin-top: 150px;
+  }
+}
