@@ -11,6 +11,9 @@ is_short: true
 tags: 
   - website
 changefreq: monthly
+eleventyNavigation:
+  key: Shoe Salon
+  order: 1
 ---
 
 {% img src=site.path.img + code + "/shoe-salon-1.jpg", caption="The Shoe Salon logo design" %}

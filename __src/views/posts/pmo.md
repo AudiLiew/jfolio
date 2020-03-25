@@ -11,6 +11,9 @@ is_short: true
 tags: 
   - website
 changefreq: monthly
+eleventyNavigation:
+  key: PMO
+  order: 1
 ---
 
 {% img src=site.path.img + code + "/pmo-1.jpg", caption="Line drawing of the Istana - Used on stationery and PMO’s prepaid stamp", border=false %}
