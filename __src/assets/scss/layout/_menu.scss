@@ -149,20 +149,38 @@
   @include tablet {
     position: absolute;
     top: 30px;
-    left: 0;
+    right: 0;
+    padding-bottom: 10px;
+    padding-top: 5px;
     visibility: hidden;
     opacity: 0;
+    background-color: $mainNavDropDownMenu;
 
-    min-width: 100%;
+    transform: translateY(-12px);
+    transition: all .1s ease;
+
+    min-width: 200px;
     //background-color: aliceblue;
 
     .dropdown-opened & {
       visibility: visible;
       opacity: 1;
+
+      transform: translateY(2px);
+      transition-delay: 0;
+    }
+
+    li {
+      margin-bottom: 0;
+      padding: .3rem 1rem;
     }
 
     a {
       display: block;
+
+      &:hover {
+        color: $mainNavDropDownMenuLinkHover;
+      }
     }
   }
 }
