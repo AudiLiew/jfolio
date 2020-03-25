@@ -35,17 +35,23 @@ module.exports = eleventyConfig => {
 
   // Shortcode for single image with captions
   eleventyConfig.addNunjucksShortcode("img", (img) => {
-
+    /*
+      Usage:
+      {% img src=site.path.img + code + "/hero.jpg", caption="hey<br>two two two", short=true %}
+      {% img src=site.path.img + code + "/hero.jpg", caption="hey<br>two two two", marginBottom=false %}
+      {% img src=site.path.img + code + "/pmo-1.jpg", caption="Line drawing of the Istana - Used on stationery and PMO’s prepaid stamp", border=true %}
+    */
     let shortClass = (img.short == undefined) ? "" : (img.short) ? "isShort" : "";
     let marginBottomClass = (img.marginBottom == undefined) ? "" : " noMarginBottom";
+    let borderClass = (img.border == undefined) ? "" : (img.border) ? "border" : "";
     let newFigure;
 
     newFigure = '<figure class="'+ shortClass + marginBottomClass +'">';  // default haz margin bottom
 
     if (img.caption != "") {
-      newFigure += '<figcaption>' + img.caption + '</figcaption><img src="' + img.src + '">';
+      newFigure += '<figcaption>' + img.caption + '</figcaption><img class="'+ borderClass+'" src="' + img.src + '">';
     } else { // no caption
-      newFigure += '<img src="' + img.src + '">';
+      newFigure += '<img class="'+ borderClass+'" src="' + img.src + '">';
     }
 
     newFigure += '</figure>';
@@ -55,6 +61,30 @@ module.exports = eleventyConfig => {
   
   // Shortcode for two/three column images with captions
   eleventyConfig.addNunjucksShortcode("imgstack", (imgstack) => {
+    /*
+      Usage:
+      {% imgstack src = [
+              site.path.img + code + "/preview.jpg", 
+              site.path.img + code + "/preview.jpg",
+              site.path.img + code + "/preview.jpg",
+              site.path.img + code + "/preview.jpg",
+              site.path.img + code + "/preview.jpg",
+              site.path.img + code + "/preview.jpg"
+            ],
+            caption = "elit exercitationem quo eos",
+            columns = 3,
+            margin = false
+      %}
+
+      {% imgstack src = [
+                    site.path.img + code + "/preview.jpg", 
+                    site.path.img + code + "/preview.jpg", 
+                    site.path.img + code + "/preview.jpg", 
+                    site.path.img + code + "/preview.jpg"
+                  ],
+                  columns = 2
+      %}
+    */
     const stackName = "stack";
     const stackItemName = stackName + "__item";
     let marginClass = (imgstack.margin == undefined) ? "" : " noMarginTopBottom";
