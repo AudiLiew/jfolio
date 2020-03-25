@@ -1,10 +1,10 @@
 {
-  "name": "Folio",
-  "description": "Portfolio site",
-  "url": "https://www.audiliew.com",
-  "domain": "https://www.audiliew.com",
+  "name": "JL Folio",
+  "description": "Jain Lo’s Portfolio site",
+  "url": "https://www.jainlo.com",
+  "domain": "https://www.jainlo.com",
   "author": {
-    "name": "AL"
+    "name": "JL"
   },
   "path": {
     "img": "/assets/img/"
