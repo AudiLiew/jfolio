@@ -6,6 +6,16 @@
 
   a {
     color: $mainNavLink;
+
+    &:hover {
+      text-decoration: none;
+    }
+  }
+
+  @include until($tablet) {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
   }
 }
 
