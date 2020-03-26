@@ -16,16 +16,16 @@ eleventyNavigation:
   order: 1
 ---
 {% set imgPathAndPrefix = site.path.img | url %}
-{% img src=imgPathAndPrefix + code + "/shoe-salon-1.jpg", caption="The Shoe Salon logo design" %}
+{% img src=imgPathAndPrefix + "/" + code + "/shoe-salon-1.jpg", caption="The Shoe Salon logo design" %}
 
-{% img src=imgPathAndPrefix + code + "/shoe-salon-2.jpg", caption="<i>Her World</i> magazine Ad - Chloé<br>Concept and digital imagine" %}
+{% img src=imgPathAndPrefix + "/" + code + "/shoe-salon-2.jpg", caption="<i>Her World</i> magazine Ad - Chloé<br>Concept and digital imagine" %}
 
-{% img src=imgPathAndPrefix + code + "/shoe-salon-3.jpg", caption="Newspaper Ad - Concept and digital imaging" %}
+{% img src=imgPathAndPrefix + "/" + code + "/shoe-salon-3.jpg", caption="Newspaper Ad - Concept and digital imaging" %}
 
 {% imgstack src = [
-            imgPathAndPrefix + code + "/shoe-salon-4.jpg", 
-            imgPathAndPrefix + code + "/shoe-salon-5.jpg", 
-            imgPathAndPrefix + code + "/shoe-salon-6.jpg"
+            imgPathAndPrefix + "/" + code + "/shoe-salon-4.jpg", 
+            imgPathAndPrefix + "/" + code + "/shoe-salon-5.jpg", 
+            imgPathAndPrefix + "/" + code + "/shoe-salon-6.jpg"
           ],
           caption = "Other Ads in the series (by colleagues)",
           columns = 3,
