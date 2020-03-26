@@ -16,7 +16,6 @@ module.exports = eleventyConfig => {
 
   let markdownLib = markdownIt(options).use(markdownItAttrs);
   
-  
   eleventyConfig.addPlugin(eleventyNavigationPlugin);
 
   eleventyConfig.setLibrary("md", markdownLib);
@@ -129,10 +128,11 @@ module.exports = eleventyConfig => {
   });  
 
   // https://remysharp.com/2019/06/26/scheduled-and-draft-11ty-posts
-  eleventyConfig.addCollection('posts', collection => {
-    return collection.getFilteredByGlob('./__src/views/posts/**/*.md')
+  eleventyConfig.addCollection('works', collection => {
+    return collection.getFilteredByGlob('./__src/views/works/**/*.md')
       .filter(livePosts).reverse();
   });
+
   // Minify HTML
   /*
   eleventyConfig.addTransform("htmlmin", function(content, outputPath) {
@@ -154,7 +154,6 @@ module.exports = eleventyConfig => {
   eleventyConfig.addLayoutAlias('post', 'layouts/post.njk')
 
   return {
-    pathPrefix : "/jfolio/",
     templateFormats: ["njk", "md"],
     markdownTemplateEngine: 'njk',
     htmlTemplateEngine: 'njk',
