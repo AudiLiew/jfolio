@@ -18,7 +18,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
 
   <link href="https://fonts.googleapis.com/css?family=El+Messiri&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="/assets/main.css">
+  <link rel="stylesheet" href="{{ site.assets.css | url }}">
   {# <link rel="icon" type="image/png" href="{{ site.images.favicon }}"> #}
   <script>document.documentElement.className="js"</script>
 
@@ -48,7 +48,7 @@
     <div id="transition__plate" class="transition__plate"></div>
     <div id="transition__bg" class="transition__bg"></div>
   </div>
-  <script src='/assets/main.js'></script>
+  <script src='{{ site.assets.js | url }}'></script>
 </body>
 </html>
 

@@ -1,13 +1,18 @@
 {
   "name": "JL Folio",
   "description": "Jain Lo’s Portfolio site",
-  "url": "https://www.jainlo.com",
-  "domain": "https://www.jainlo.com",
+  "url": "https://audiliew.github.io/jfolio",
+  "domain": "https://audiliew.github.io/jfolio",
+  "home": "/",
   "author": {
     "name": "JL"
   },
+  "assets": {
+    "css": "/assets/main.css",
+    "js": "/assets/main.js"
+  },
   "path": {
-    "img": "/assets/img/"
+    "img": "/assets/img"
   },
   "names": {
     "image": {

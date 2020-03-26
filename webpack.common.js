@@ -55,6 +55,11 @@ module.exports = {
       },
       {
         context: '.',
+        from: '.nojekyll',
+        to: '../'
+      },
+      {
+        context: '.',
         from: 'robots.txt',
         to: '../'
       }

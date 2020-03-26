@@ -1,8 +1,9 @@
 ---
 layout: default
 ---
-<div class="hero bannerParallax" style="background-image:url({{ site.path.img }}/{{ code }}/{{ heroImg }})">
-  <img src="{{ site.path.img }}/{{ code }}/{{ heroImg }}">
+
+<div class="hero bannerParallax" style="background-image:url({{ site.path.img | url }}/{{ code }}/{{ heroImg }})">
+  <img src="{{ site.path.img | url }}/{{ code }}/{{ heroImg }}">
 </div>
 <div class="post-wrap">
   <div class="container">
