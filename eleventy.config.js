@@ -1,7 +1,7 @@
 const eleventyNavigationPlugin = require("@11ty/eleventy-navigation");
 
 module.exports = eleventyConfig => {
-  const htmlmin = require("html-minifier");
+  // const htmlmin = require("html-minifier");
   const markdownIt = require("markdown-it");
   const markdownItAttrs = require('markdown-it-attrs');
   const options = {
@@ -11,15 +11,29 @@ module.exports = eleventyConfig => {
     typographer: true
   };
 
+  
   const now = new Date();
   const livePosts = p => p.date <= now && (p.data.permalink !== false);
-
+  
   let markdownLib = markdownIt(options).use(markdownItAttrs);
+  eleventyConfig.setLibrary("md", markdownLib);
+  
+  // https://remysharp.com/2019/06/26/scheduled-and-draft-11ty-posts
+  eleventyConfig.addCollection('works', collection => {
+    return collection.getFilteredByGlob('./__src/views/works/**/*.md')
+    .filter(livePosts).reverse();
+  });
   
   eleventyConfig.addPlugin(eleventyNavigationPlugin);
 
-  eleventyConfig.setLibrary("md", markdownLib);
+  // Layout aliases
+  eleventyConfig.addLayoutAlias('default', 'layouts/default.njk')
+  eleventyConfig.addLayoutAlias('work', 'layouts/work.njk')
 
+  /* *********************************************************
+   * FILTERS
+   * *********************************************************
+   */
   // Add a readable date formatter filter to Nunjucks
   eleventyConfig.addFilter("dateDisplay", require("./__src/filters/dates.js"))
 
@@ -27,11 +41,11 @@ module.exports = eleventyConfig => {
   // For sitemap
   eleventyConfig.addFilter("htmlDateDisplay", require("./__src/filters/timestamp.js"))
 
-  // Collections
-  //eleventyConfig.addCollection('blog', collection => {
-  //  return collection.getFilteredByTag('blog').reverse()
-  //})
-
+  /* *********************************************************
+   * SHORTCODES
+   * *********************************************************
+   */
+  
   // Shortcode for External links
   eleventyConfig.addShortcode("extlink", (name, url) => {
     return '<a href="'+ url +'" target="_blank" rel="noopener">'+ name +'</a>';
@@ -127,11 +141,7 @@ module.exports = eleventyConfig => {
     return nowFullYear + emptyVariableForThisToWork;
   });  
 
-  // https://remysharp.com/2019/06/26/scheduled-and-draft-11ty-posts
-  eleventyConfig.addCollection('works', collection => {
-    return collection.getFilteredByGlob('./__src/views/works/**/*.md')
-      .filter(livePosts).reverse();
-  });
+  
 
   // Minify HTML
   /*
@@ -148,10 +158,6 @@ module.exports = eleventyConfig => {
     return content;
   });
   // */
-
-  // Layout aliases
-  eleventyConfig.addLayoutAlias('default', 'layouts/default.njk')
-  eleventyConfig.addLayoutAlias('post', 'layouts/post.njk')
 
   return {
     templateFormats: ["njk", "md"],

@@ -3,11 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  {% if renderData.title %}
-  <title>{{ renderData.title }}</title>
-  {% else %}
-  <title>{{title}}{% if page.url == '/' %}{{ site.name }}{% endif %}</title>    
-  {% endif %}
+  <title>{{title}}{% if page.url != '/' %} | {% endif %}{{ site.name }}</title>    
   {% if meta_description %}
   <meta name="description" content="{{ meta_description }}">    
   {% endif %}
@@ -17,20 +13,21 @@
   <link rel="dns-prefetch" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
 
-  <link href="https://fonts.googleapis.com/css?family=El+Messiri&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="{{ site.assets.css | url }}">
   {# <link rel="icon" type="image/png" href="{{ site.images.favicon }}"> #}
   <script>document.documentElement.className="js"</script>
 
-  {# Google Analytics 
-  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-153847073-1"></script>
+  <link href="https://fonts.googleapis.com/css?family=El+Messiri|Open+Sans:300,400&display=swap" rel="stylesheet">
+
+  {% if site.analyticsCode %}
+  <script async src="https://www.googletagmanager.com/gtag/js?id={{ site.analyticsCode }}"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
-    gtag('config', 'UA-153847073-1');
-  </script> #}
-  <link href="https://fonts.googleapis.com/css?family=Carter+One|Open+Sans:300,400&display=swap" rel="stylesheet">
+    gtag('config', '{{ site.analyticsCode }}');
+  </script>
+  {% endif %}
 </head>
 <body{% if body_id %} id="{{ body_id }}"{% endif %}{% if body_class %} class="{{ body_class }}"{% endif %}>
   {# include header #}
@@ -44,10 +41,10 @@
   {# include footer #}
   {% include "../components/footer.njk" %}
 
-  <div class="transition">
+  {# <div class="transition">
     <div id="transition__plate" class="transition__plate"></div>
     <div id="transition__bg" class="transition__bg"></div>
-  </div>
+  </div> #}
   <script src='{{ site.assets.js | url }}'></script>
 </body>
 </html>
