@@ -3,11 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  {% if renderData.title %}
-  <title>{{ renderData.title }}</title>
-  {% else %}
-  <title>{{title}}{% if page.url == '/' %}{{ site.name }}{% endif %}</title>    
-  {% endif %}
+  <title>{{title}}{% if page.url != '/' %} | {% endif %}{{ site.name }}</title>    
   {% if meta_description %}
   <meta name="description" content="{{ meta_description }}">    
   {% endif %}
