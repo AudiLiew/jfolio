@@ -18,11 +18,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
 
   <link href="https://fonts.googleapis.com/css?family=El+Messiri&display=swap" rel="stylesheet">
-  {% if siteData.environment == "production" %}
-  <link rel="stylesheet" href="{{ site.domain }}/assets/main.css">
-  {% else %}
-  <link rel="stylesheet" href="/assets/main.css">
-  {% endif %}
+  <link rel="stylesheet" href="{{ site.assets.css | url }}">
   {# <link rel="icon" type="image/png" href="{{ site.images.favicon }}"> #}
   <script>document.documentElement.className="js"</script>
 
@@ -52,11 +48,7 @@
     <div id="transition__plate" class="transition__plate"></div>
     <div id="transition__bg" class="transition__bg"></div>
   </div>
-  {% if siteData.environment == "production" %}
-  <script src='{{ site.domain }}/assets/main.js'></script>
-  {% else %}
-  <script src='/assets/main.js'></script>
-  {% endif %}
+  <script src='{{ site.assets.js | url }}'></script>
 </body>
 </html>
 
