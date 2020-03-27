@@ -89,6 +89,52 @@ module.exports = eleventyConfig => {
     return newFigure;
   });
   
+
+  // Shortcode for mason images
+  eleventyConfig.addNunjucksShortcode("imgmason", (imgmason) => {
+    /*
+      Usage:
+
+      {% imgmason src = [
+                    site.path.img + code + "/preview.jpg", 
+                    site.path.img + code + "/preview.jpg", 
+                    site.path.img + code + "/preview.jpg"
+                  ],
+                  caption = "elit exercitationem quo eos",
+                  marginTop = true,
+                  marginBottom = true,
+                  border = true
+      %}
+    */
+    const masonName = "mason";
+    const masonItemName = masonName + "__item";
+    let marginClass = "";
+    let borderClass = (imgmason.border == undefined) ? "" : (imgmason.border) ? " border" : "";
+    let newFigure;
+
+    if (imgmason.marginTop != undefined && !imgmason.marginTop) {
+      marginClass += " noMarginTop"
+    }
+
+    if (imgmason.marginBottom != undefined && !imgmason.marginBottom) {
+      marginClass += " noMarginBottom"
+    }
+
+    newFigure = '<figure class="'+ masonName + marginClass +'">';  // default haz margin bottom
+
+    if (imgmason.caption != undefined) {
+      newFigure += '<figcaption>' + imgmason.caption + '</figcaption>';
+    } 
+    
+    for (img of imgmason.src) {
+      newFigure += '<img src="' + img + '" class="' + masonItemName + borderClass + '">';
+    }
+
+    newFigure += '</figure>';
+
+    return newFigure;
+  });
+
   // Shortcode for two/three column images with captions
   eleventyConfig.addNunjucksShortcode("imgstack", (imgstack) => {
     /*
@@ -102,8 +148,9 @@ module.exports = eleventyConfig => {
               site.path.img + code + "/preview.jpg"
             ],
             caption = "elit exercitationem quo eos",
-            columns = 3,
-            margin = false,
+            columns = 2,
+            marginTop = true,
+            marginBottom = true,
             border = true 
       %}
 
@@ -118,17 +165,28 @@ module.exports = eleventyConfig => {
     */
     const stackName = "stack";
     const stackItemName = stackName + "__item";
-    let marginClass = (imgstack.margin == undefined) ? "" : " noMarginTopBottom";
+    let marginClass = "";
     let borderClass = (imgstack.border == undefined) ? "" : (imgstack.border) ? " border" : "";
     let newFigure, columnClass = stackName + " " + stackName;
 
     switch (imgstack.columns) {
+      case 4:
+        columnClass += "--four";
+        break;
       case 3:
         columnClass += "--three";
         break;
       case 2:
       default:
         columnClass += "--two";
+    }
+
+    if (imgstack.marginTop != undefined && !imgstack.marginTop) {
+      marginClass += " noMarginTop"
+    }
+
+    if (imgstack.marginBottom != undefined && !imgstack.marginBottom) {
+      marginClass += " noMarginBottom"
     }
 
     newFigure = '<figure class="'+ columnClass + marginClass +'">';  // default haz margin bottom

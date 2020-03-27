@@ -40,6 +40,30 @@ figure {
   }
 }
 
+$mason: "mason";
+
+.mason {
+
+  margin-bottom: 5rem;
+
+  &__item {
+    margin-bottom: 2rem;
+  }
+
+  @include tablet {
+    column-count: 2;
+    column-gap: 1.5rem;
+
+    &__item {
+      margin-bottom: 1.4rem;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+}
+
 $stack: "stack";
 
 .#{stack} {
@@ -66,6 +90,7 @@ $stack: "stack";
 
     &__item {
       margin-bottom: 2%;
+      align-self: center;
 
       .#{stack}--two & {
         width: 49%;
@@ -73,6 +98,10 @@ $stack: "stack";
 
       .#{stack}--three & {
         width: 32%;
+      }
+
+      .#{stack}--four & {
+        width: 24%;
       }
     }
 
