@@ -26,6 +26,13 @@ figure {
     }
   }
 
+  &.isMedium {
+    @include tablet {
+      width: 80%;
+      margin: 0 auto;
+    }
+  }
+
   img {
     display: block;
   }
