@@ -123,6 +123,9 @@ module.exports = eleventyConfig => {
     let newFigure, columnClass = stackName + " " + stackName;
 
     switch (imgstack.columns) {
+      case 4:
+        columnClass += "--four";
+        break;
       case 3:
         columnClass += "--three";
         break;

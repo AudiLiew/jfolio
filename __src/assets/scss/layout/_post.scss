@@ -99,6 +99,10 @@ $stack: "stack";
       .#{stack}--three & {
         width: 32%;
       }
+
+      .#{stack}--four & {
+        width: 24%;
+      }
     }
 
   }
