@@ -21,7 +21,7 @@ changefreq: monthly
 {% img src=imgPathAndPrefix + "/" + code + "/denni-2.jpg", caption="", marginBottom=false %}
 {% img src=imgPathAndPrefix + "/" + code + "/denni-3.jpg", caption="" %}
 
-{% img src=imgPathAndPrefix + "/" + code + "/denni-4.jpg", caption="", short=true, marginBottom=false %}
+{% img src=imgPathAndPrefix + "/" + code + "/denni-4.jpg", caption="", size="short", marginBottom=false %}
 
 {% imgstack src = [
               imgPathAndPrefix + "/" + code + "/denni-5.jpg", 
