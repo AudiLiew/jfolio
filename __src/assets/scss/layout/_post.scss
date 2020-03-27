@@ -40,6 +40,30 @@ figure {
   }
 }
 
+$mason: "mason";
+
+.mason {
+
+  margin-bottom: 5rem;
+
+  &__item {
+    margin-bottom: 2rem;
+  }
+
+  @include tablet {
+    column-count: 2;
+    column-gap: 1.5rem;
+
+    &__item {
+      margin-bottom: 1.4rem;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+}
+
 $stack: "stack";
 
 .#{stack} {
