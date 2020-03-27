@@ -89,6 +89,43 @@ module.exports = eleventyConfig => {
     return newFigure;
   });
   
+
+  // Shortcode for mason images
+  eleventyConfig.addNunjucksShortcode("imgmason", (imgmason) => {
+    /*
+      Usage:
+
+      {% imgmason src = [
+                    site.path.img + code + "/preview.jpg", 
+                    site.path.img + code + "/preview.jpg", 
+                    site.path.img + code + "/preview.jpg"
+                  ],
+                  caption = "elit exercitationem quo eos",
+                  margin = false,
+                  border = true
+      %}
+    */
+    const masonName = "mason";
+    const masonItemName = masonName + "__item";
+    let marginClass = (imgmason.margin == undefined) ? "" : " noMarginTopBottom";
+    let borderClass = (imgmason.border == undefined) ? "" : (imgmason.border) ? " border" : "";
+    let newFigure;
+
+    newFigure = '<figure class="'+ masonName + marginClass +'">';  // default haz margin bottom
+
+    if (imgmason.caption != undefined) {
+      newFigure += '<figcaption>' + imgmason.caption + '</figcaption>';
+    } 
+    
+    for (img of imgmason.src) {
+      newFigure += '<img src="' + img + '" class="' + masonItemName + borderClass + '">';
+    }
+
+    newFigure += '</figure>';
+
+    return newFigure;
+  });
+
   // Shortcode for two/three column images with captions
   eleventyConfig.addNunjucksShortcode("imgstack", (imgstack) => {
     /*
