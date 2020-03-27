@@ -66,6 +66,7 @@ $stack: "stack";
 
     &__item {
       margin-bottom: 2%;
+      align-self: center;
 
       .#{stack}--two & {
         width: 49%;
