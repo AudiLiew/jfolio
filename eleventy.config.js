@@ -101,15 +101,24 @@ module.exports = eleventyConfig => {
                     site.path.img + code + "/preview.jpg"
                   ],
                   caption = "elit exercitationem quo eos",
-                  margin = false,
+                  marginTop = true,
+                  marginBottom = true,
                   border = true
       %}
     */
     const masonName = "mason";
     const masonItemName = masonName + "__item";
-    let marginClass = (imgmason.margin == undefined) ? "" : " noMarginTopBottom";
+    let marginClass = "";
     let borderClass = (imgmason.border == undefined) ? "" : (imgmason.border) ? " border" : "";
     let newFigure;
+
+    if (imgmason.marginTop != undefined && !imgmason.marginTop) {
+      marginClass += " noMarginTop"
+    }
+
+    if (imgmason.marginBottom != undefined && !imgmason.marginBottom) {
+      marginClass += " noMarginBottom"
+    }
 
     newFigure = '<figure class="'+ masonName + marginClass +'">';  // default haz margin bottom
 
@@ -139,8 +148,9 @@ module.exports = eleventyConfig => {
               site.path.img + code + "/preview.jpg"
             ],
             caption = "elit exercitationem quo eos",
-            columns = 3,
-            margin = false,
+            columns = 2,
+            marginTop = true,
+            marginBottom = true,
             border = true 
       %}
 
@@ -155,7 +165,7 @@ module.exports = eleventyConfig => {
     */
     const stackName = "stack";
     const stackItemName = stackName + "__item";
-    let marginClass = (imgstack.margin == undefined) ? "" : " noMarginTopBottom";
+    let marginClass = "";
     let borderClass = (imgstack.border == undefined) ? "" : (imgstack.border) ? " border" : "";
     let newFigure, columnClass = stackName + " " + stackName;
 
@@ -169,6 +179,14 @@ module.exports = eleventyConfig => {
       case 2:
       default:
         columnClass += "--two";
+    }
+
+    if (imgstack.marginTop != undefined && !imgstack.marginTop) {
+      marginClass += " noMarginTop"
+    }
+
+    if (imgstack.marginBottom != undefined && !imgstack.marginBottom) {
+      marginClass += " noMarginBottom"
     }
 
     newFigure = '<figure class="'+ columnClass + marginClass +'">';  // default haz margin bottom
