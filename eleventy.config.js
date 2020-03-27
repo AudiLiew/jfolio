@@ -55,16 +55,28 @@ module.exports = eleventyConfig => {
   eleventyConfig.addNunjucksShortcode("img", (img) => {
     /*
       Usage:
-      {% img src=site.path.img + code + "/hero.jpg", caption="hey<br>two two two", short=true %}
+      {% img src=site.path.img + code + "/hero.jpg", caption="hey<br>two two two", size=short, medium %}
       {% img src=site.path.img + code + "/hero.jpg", caption="hey<br>two two two", marginBottom=false %}
       {% img src=site.path.img + code + "/pmo-1.jpg", caption="Line drawing of the Istana - Used on stationery and PMO’s prepaid stamp", border=true %}
     */
-    let shortClass = (img.short == undefined) ? "" : (img.short) ? "isShort" : "";
+   
     let marginBottomClass = (img.marginBottom == undefined) ? "" : " noMarginBottom";
     let borderClass = (img.border == undefined) ? "" : (img.border) ? "border" : "";
     let newFigure;
+    let lengthClass;
 
-    newFigure = '<figure class="'+ shortClass + marginBottomClass +'">';  // default haz margin bottom
+    switch(img.size) {
+      case "short":
+        lengthClass = "isShort";
+        break;
+      case "medium":
+        lengthClass = "isMedium";
+        break;
+      default:
+        lengthClass = "";
+    }
+
+    newFigure = '<figure class="'+ lengthClass + marginBottomClass +'">';  // default haz margin bottom
 
     if (img.caption != "") {
       newFigure += '<figcaption>' + img.caption + '</figcaption><img class="'+ borderClass+'" src="' + img.src + '">';
