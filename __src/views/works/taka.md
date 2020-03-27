@@ -29,6 +29,71 @@ eleventyNavigation:
             imgPathAndPrefix + "/" + code + "/taka-7.jpg", 
             imgPathAndPrefix + "/" + code + "/taka-8.jpg"
           ],
-          caption = "Other Ads in the series (by colleagues)",
-          columns = 4
+          caption = "Chinese New Year campaign 2017 - Logo, mailer cover design, Launch Ad photography art direction, and red packets",
+          columns = 4,
+          marginBottom = false
 %}
+
+{% imgmason src = [
+            imgPathAndPrefix + "/" + code + "/taka-9.jpg", 
+            imgPathAndPrefix + "/" + code + "/taka-10.jpg", 
+            imgPathAndPrefix + "/" + code + "/taka-11.jpg"
+          ]
+%}
+
+{% img src=imgPathAndPrefix + "/" + code + "/taka-12.jpg", caption="Chinese New Year campaign 2015 - Logo, red packet, mailers cover design, and inside pages", marginBottom=false %}
+{% img src=imgPathAndPrefix + "/" + code + "/taka-13.jpg", caption="", marginBottom=false %}
+
+{% imgstack src = [
+            imgPathAndPrefix + "/" + code + "/taka-14.jpg", 
+            imgPathAndPrefix + "/" + code + "/taka-15.jpg", 
+            imgPathAndPrefix + "/" + code + "/taka-16.jpg"
+          ],
+          caption = "",
+          columns = 3,
+          marginTop = false
+%}
+
+{% imgstack src = [
+            imgPathAndPrefix + "/" + code + "/taka-17.jpg", 
+            imgPathAndPrefix + "/" + code + "/taka-18.jpg"
+          ],
+          caption = "2016 Mid-autmn ad design, logo, and photography art direction",
+          columns = 2
+%}
+
+{% img src=imgPathAndPrefix + "/" + code + "/taka-19.jpg", caption="Selected newspaper ads - photography art direction and layout", marginBottom=false %}
+
+{% imgstack src = [
+            imgPathAndPrefix + "/" + code + "/taka-20.jpg", 
+            imgPathAndPrefix + "/" + code + "/taka-21.jpg"
+          ],
+          caption = "",
+          columns = 2,
+          marginTop = false,
+          marginBottom = false
+%}
+
+{% imgmason src = [
+            imgPathAndPrefix + "/" + code + "/taka-22.jpg", 
+            imgPathAndPrefix + "/" + code + "/taka-24.jpg", 
+            imgPathAndPrefix + "/" + code + "/taka-23.jpg", 
+            imgPathAndPrefix + "/" + code + "/taka-25.jpg"
+          ],
+          marginTop = false
+%}
+
+{% imgstack src = [
+            imgPathAndPrefix + "/" + code + "/taka-26.jpg", 
+            imgPathAndPrefix + "/" + code + "/taka-27.jpg", 
+            imgPathAndPrefix + "/" + code + "/taka-28.jpg", 
+            imgPathAndPrefix + "/" + code + "/taka-29.jpg"
+          ],
+          caption = "2012 Spring beauty and Autumn beauty mailers - photography art direction and layout",
+          columns = 2
+%}
+
+{% img src=imgPathAndPrefix + "/" + code + "/taka-30.jpg", caption="2011 Christmas mailer - Cover design, layout, and photography art direction", marginBottom=false %}
+{% img src=imgPathAndPrefix + "/" + code + "/taka-31.jpg", caption="", border = true, marginBottom=false %}
+{% img src=imgPathAndPrefix + "/" + code + "/taka-32.jpg", caption="", border = true, marginBottom=false %}
+{% img src=imgPathAndPrefix + "/" + code + "/taka-33.jpg", caption="", border = true %}
