@@ -117,8 +117,10 @@ $headerShadow:  $gray-400;
 $mainNavLink:   $bodyText;
 $mainNavHoverBg:  lighten($headerBg, 10%);
 
+$globalLinkHover: $teal;
+
 $mainNavDropDownMenu: $white;
-$mainNavDropDownMenuLinkHover: $teal;
+$mainNavDropDownMenuLinkHover: $globalLinkHover;
 
 $link: $mondayBlue;
 

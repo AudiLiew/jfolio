@@ -55,6 +55,8 @@ $work : "work";
       .#{$work}__preview img {
         transform: scale(1.5);
       }
+
+      
     }
   }
 
@@ -73,8 +75,15 @@ $work : "work";
   &__title {
     margin-top: 1rem;
     font-family: $titleType;
-    font-size: 2rem;
-    line-height: 2.2rem;
+    font-size: 1.7rem;
+    padding-left:  1.5rem;
+    padding-right: 1.5rem;
+    line-height: 1.9rem;
+    transition: color 300ms ease-in-out;
+
+    .#{$work}__link:hover & {
+      color: darken($color: $globalLinkHover, $amount: 20);
+    }
      
   }
 
