@@ -1,5 +1,5 @@
 ---
-title: 'Takashimaya'
+title: 'Takashimaya Anniversary'
 projectType: '23rd Anniversary Campaign'
 projectIntro: 'This is intro Culpa voluptatem optio ipsam quisquam maxime nihil nisi reprehenderit nam labore quo animi, autem adipisci explicabo fugit exercitationem deserunt nobis minima magni tempora eum est aliquid. Reiciendis accusamus nam voluptatum dicta tenetur'
 code: 'taka23anniversary'
@@ -9,7 +9,7 @@ heroImg: 'hero.jpg'
 #mod_date: 2020-01-01
 is_short: true
 eleventyNavigation:
-  key: Taka Anniversary
+  key: Takashimaya Anniversary
   order: 1
 tags: 
   - identity
