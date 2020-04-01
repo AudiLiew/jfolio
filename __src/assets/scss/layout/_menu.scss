@@ -18,7 +18,7 @@
     flex-direction: column;
   }
 }
-
+ 
 .navbar-burger {
   @include size(40px, 60px);
   z-index: 1000;
@@ -147,6 +147,11 @@
   margin: 0;
   padding: 0;
   list-style: none;
+  line-height: 1.3rem;
+
+  a {
+    display: block;
+  }
 
   @include mobile {
     margin-bottom: 1.3rem;
@@ -162,14 +167,20 @@
     right: 0;
     padding-bottom: 10px;
     padding-top: 5px;
+    min-width: 200px;
+
     visibility: hidden;
     opacity: 0;
     background-color: $mainNavDropDownMenu;
-
+    // line-height: 1.4rem;
+    font-size: 0.9rem;
+    line-height: 1rem;
+    
     transform: translateY(-12px);
     transition: all .1s ease;
 
-    min-width: 200px;
+    box-shadow: #e4e5e6 7px 10px 12px;
+
     //background-color: aliceblue;
 
     .dropdown-opened & {
@@ -185,8 +196,7 @@
       padding: .3rem 1rem;
     }
 
-    a {
-      display: block;
+    a {     
 
       &:hover {
         color: $mainNavDropDownMenuLinkHover;

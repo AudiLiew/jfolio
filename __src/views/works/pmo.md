@@ -12,7 +12,7 @@ tags:
   - cards
 changefreq: monthly
 eleventyNavigation:
-  key: PMO
+  key: Prime Minister’s Office
   order: 1
 ---
 {% set imgPathAndPrefix = site.path.img | url %}

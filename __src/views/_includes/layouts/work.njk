@@ -19,9 +19,36 @@ layout: default
         <p class="post-header__intro">{{ projectIntro }}</p>        
       </div>
       {% endif %}
-    </header>
+    </header><!-- // post-header -->
     <div class="post-content">
       {{ content | safe }}
+    </div><!-- // post-content -->
+    <div class="post-pagination pagination">
+    {% set currentItemIndex = 0 %}
+    {% for post in collections.works %}
+      {% if post.url == page.url %}
+        {% set currentItemIndex = loop.index0 %}
+      {% endif %}
+    {% endfor %}
+
+    {% set prevItemIndex = currentItemIndex - 1 %}
+    {% set nextItemIndex = currentItemIndex + 1 %}
+
+    {% if prevItemIndex >= 0 %}
+    {% set prev = collections.works[prevItemIndex] %}
+    <div class="pagination__button pagination__button--prev">
+      <div class="pagination__type">Previous</div>
+      <a class="pagination__link" href="{{ prev.url | url }}">{{ prev.data.title }}</a>
     </div>
-  </div>
-</div>
+    {% endif %}
+
+    {% if nextItemIndex < collections.works.length %}
+    {% set next = collections.works[nextItemIndex] %}
+    <div class="pagination__button pagination__button--next">
+      <div class="pagination__type">Next</div>
+      <a class="pagination__link" href="{{ next.url | url }}">{{ next.data.title }}</a>
+    </div>
+    {% endif %}
+    </div><!-- // post-pagination -->
+  </div><!-- // container -->
+</div><!-- // post-wrap -->

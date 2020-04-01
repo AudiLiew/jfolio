@@ -9,7 +9,7 @@ heroImg: 'hero.jpg'
 #mod_date: 2020-01-01
 is_short: true
 eleventyNavigation:
-  key: JIPL Harry
+  key: Japan IPL Express
   order: 1
 tags: 
   - calendar

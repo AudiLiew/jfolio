@@ -1,5 +1,5 @@
 ---
-title: "Takashimaya Department Store"
+title: "Takashimaya"
 projectType: 'Selected works & campaigns'
 projectIntro: 'This is intro Culpa voluptatem optio ipsam quisquam maxime nihil nisi reprehenderit nam labore quo animi, autem adipisci explicabo fugit exercitationem deserunt nobis minima magni tempora eum est aliquid. Reiciendis accusamus nam voluptatum dicta tenetur'
 code: 'taka'
