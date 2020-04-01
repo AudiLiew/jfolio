@@ -16,7 +16,9 @@
   }
 }
 
-.work {
+$work : "work";
+
+.#{$work} {
   text-align: center;
   
   @include mobile {
@@ -42,15 +44,29 @@
     object-fit: cover;
   }
 
-  a {
+  &__link {
     display: block;
     color: $bodyText;
     text-decoration: none;
+    
+    &:hover {
+      text-decoration: none;
+      
+      .#{$work}__preview img {
+        transform: scale(1.5);
+      }
+    }
   }
 
   &__preview {
+    overflow: hidden;
+
     @include tablet {
       height: 560px;
+    }
+
+    img {
+      transition: transform 7s cubic-bezier(0, 0.6, 0.45, 1);
     }
   }
 
@@ -59,7 +75,7 @@
     font-family: $titleType;
     font-size: 2rem;
     line-height: 2.4rem;
-    
+     
   }
 
   &__type {
