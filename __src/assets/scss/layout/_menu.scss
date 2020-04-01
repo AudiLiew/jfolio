@@ -147,6 +147,11 @@
   margin: 0;
   padding: 0;
   list-style: none;
+  line-height: 1.3rem;
+
+  a {
+    display: block;
+  }
 
   @include mobile {
     margin-bottom: 1.3rem;
@@ -191,8 +196,7 @@
       padding: .3rem 1rem;
     }
 
-    a {
-      display: block;
+    a {     
 
       &:hover {
         color: $mainNavDropDownMenuLinkHover;
