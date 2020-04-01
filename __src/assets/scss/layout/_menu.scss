@@ -167,10 +167,14 @@
     visibility: hidden;
     opacity: 0;
     background-color: $mainNavDropDownMenu;
-    line-height: 1.4rem;
+    // line-height: 1.4rem;
+    font-size: 0.9rem;
+    line-height: 1rem;
     
     transform: translateY(-12px);
     transition: all .1s ease;
+
+    box-shadow: #e4e5e6 7px 10px 12px;
 
     //background-color: aliceblue;
 
