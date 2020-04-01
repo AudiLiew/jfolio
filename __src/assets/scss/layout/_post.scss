@@ -158,3 +158,21 @@ $postHeader: 'post-header';
     margin: 0 auto 5rem;
   }
 }
+
+.pagination {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 5rem;
+  line-height: 1.3rem;
+
+  &__button {
+    &--next {
+      // flex-grow: 1;
+      margin-left: auto;
+    }
+  }
+
+  &__type {
+    font-size: .8rem;
+  }
+}
