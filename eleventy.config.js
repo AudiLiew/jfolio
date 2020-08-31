@@ -51,6 +51,42 @@ module.exports = eleventyConfig => {
     return '<a href="'+ url +'" target="_blank" rel="noopener">'+ name +'</a>';
   });
 
+  // Shortcode for single video with captions
+  eleventyConfig.addNunjucksShortcode("vid", (vid) => {
+    /*
+      Usage:
+      {% vid src=site.path.vid + code + "/hero.jpg", caption="hey<br>two two two", size=short, medium %}
+      {% vid src=site.path.vid + code + "/hero.jpg", caption="hey<br>two two two", marginBottom=false %}
+      {% vid src=site.path.vid + code + "/pmo-1.jpg", caption="Line drawing of the Istana - Used on stationery and PMO’s prepaid stamp", border=true %}
+    */
+   
+    let marginBottomClass = (vid.marginBottom == undefined) ? "" : " noMarginBottom";
+    let borderClass = (vid.border == undefined) ? "" : (vid.border) ? "border" : "";
+    let newFigure;
+    let lengthClass;
+
+    switch(vid.size) {
+      case "short":
+        lengthClass = "isShort";
+        break;
+      case "medium":
+        lengthClass = "isMedium";
+        break;
+      default:
+        lengthClass = "";
+    }
+
+    newFigure = '<figure class="'+ lengthClass + marginBottomClass +'">';  // default haz margin bottom
+
+    if (vid.caption != "") {
+      newFigure += '<figcaption>' + vid.caption + '</figcaption>';
+    }
+
+    newFigure += '<video controls width="100%" class="'+ borderClass+'"><source src="' + vid.src + '" type="video/mp4"></video></figure>';
+
+    return newFigure;
+  });
+
   // Shortcode for single image with captions
   eleventyConfig.addNunjucksShortcode("img", (img) => {
     /*
