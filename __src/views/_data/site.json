@@ -12,7 +12,8 @@
     "js": "/assets/main.js"
   },
   "path": {
-    "img": "/assets/img"
+    "img": "/assets/img",
+    "vid": "/assets/vid"
   },
   "names": {
     "image": {
