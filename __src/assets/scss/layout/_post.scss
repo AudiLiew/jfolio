@@ -40,6 +40,10 @@ figure {
   }
 }
 
+video {
+  outline: 1px solid gray('200');
+}
+
 $mason: "mason";
 
 .mason {
