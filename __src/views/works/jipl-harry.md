@@ -1,5 +1,5 @@
 ---
-title: 'Japan IPL Express'
+title: 'Japan IPL Express (Calendar)'
 projectType: 'Where’s Harry 2019 Calendar'
 projectIntro: 'This is intro Culpa voluptatem optio ipsam quisquam maxime nihil nisi reprehenderit nam labore quo animi, autem adipisci explicabo fugit exercitationem deserunt nobis minima magni tempora eum est aliquid. Reiciendis accusamus nam voluptatum dicta tenetur'
 code: 'jipl-harry'
@@ -9,7 +9,7 @@ heroImg: 'hero.jpg'
 #mod_date: 2020-01-01
 is_short: true
 eleventyNavigation:
-  key: Japan IPL Express
+  key: Japan IPL Express (Calendar)
   order: 1
 tags: 
   - calendar

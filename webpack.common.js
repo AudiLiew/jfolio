@@ -49,6 +49,10 @@ module.exports = {
         from: 'img/**/*'
       },
       {
+        context: '__src/assets',
+        from: 'vid/**/*'
+      },
+      {
         context: '.',
         from: 'CNAME',
         to: '../'
