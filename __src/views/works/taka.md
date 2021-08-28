@@ -38,7 +38,8 @@ eleventyNavigation:
             imgPathAndPrefix + "/" + code + "/taka-9.jpg", 
             imgPathAndPrefix + "/" + code + "/taka-10.jpg", 
             imgPathAndPrefix + "/" + code + "/taka-11.jpg"
-          ]
+          ],
+          bottomFix = true
 %}
 
 {% img src=imgPathAndPrefix + "/" + code + "/taka-12.jpg", caption="Chinese New Year campaign 2015 - Logo, red packet, mailers cover design, and inside pages", marginBottom=false %}
