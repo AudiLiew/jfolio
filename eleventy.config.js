@@ -96,6 +96,7 @@ module.exports = eleventyConfig => {
       {% img src=site.path.img + code + "/pmo-1.jpg", caption="Line drawing of the Istana - Used on stationery and PMO’s prepaid stamp", border=true %}
     */
    
+    let marginTopClass = (img.marginTop == undefined) ? "" : " noMarginTop";
     let marginBottomClass = (img.marginBottom == undefined) ? "" : " noMarginBottom";
     let borderClass = (img.border == undefined) ? "" : (img.border) ? "border" : "";
     let newFigure;
@@ -112,7 +113,7 @@ module.exports = eleventyConfig => {
         lengthClass = "";
     }
 
-    newFigure = '<figure class="'+ lengthClass + marginBottomClass +'">';  // default haz margin bottom
+    newFigure = '<figure class="'+ lengthClass + marginBottomClass + marginTopClass +'">';  // default haz margin bottom
 
     if (img.caption != "") {
       newFigure += '<figcaption>' + img.caption + '</figcaption><img class="'+ borderClass+'" src="' + img.src + '">';
@@ -139,6 +140,7 @@ module.exports = eleventyConfig => {
                   caption = "elit exercitationem quo eos",
                   marginTop = true,
                   marginBottom = true,
+                  bottomFix = true,
                   border = true
       %}
     */
@@ -147,16 +149,21 @@ module.exports = eleventyConfig => {
     let marginClass = "";
     let borderClass = (imgmason.border == undefined) ? "" : (imgmason.border) ? " border" : "";
     let newFigure;
+    let additionalClass = "";
 
     if (imgmason.marginTop != undefined && !imgmason.marginTop) {
-      marginClass += " noMarginTop"
+      marginClass += " noMarginTop";
     }
 
     if (imgmason.marginBottom != undefined && !imgmason.marginBottom) {
-      marginClass += " noMarginBottom"
+      marginClass += " noMarginBottom";
     }
 
-    newFigure = '<figure class="'+ masonName + marginClass +'">';  // default haz margin bottom
+    if (imgmason.bottomFix != undefined && imgmason.bottomFix) {
+      additionalClass += " " + masonName + "--bottomFix";
+    }
+
+    newFigure = '<figure class="'+ masonName + marginClass + additionalClass +'">';  // default haz margin bottom
 
     if (imgmason.caption != undefined) {
       newFigure += '<figcaption>' + imgmason.caption + '</figcaption>';
