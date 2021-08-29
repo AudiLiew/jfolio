@@ -1,5 +1,5 @@
 ---
-title: "Paramedic"
+title: "Paramedic Aesthetics"
 projectType: 'Rebranding'
 projectIntro: 'This is intro Culpa voluptatem optio ipsam quisquam maxime nihil nisi reprehenderit nam labore quo animi, autem adipisci explicabo fugit exercitationem deserunt nobis minima magni tempora eum est aliquid. Reiciendis accusamus nam voluptatum dicta tenetur'
 code: 'paramedic'
@@ -39,12 +39,20 @@ eleventyNavigation:
 
 {% img src=imgPathAndPrefix + "/" + code + "/paramedic-10.jpg", caption="Website Design", size="medium" %}
 
-{% imgstack src = [
+<!-- {% imgstack src = [
             imgPathAndPrefix + "/" + code + "/paramedic-11.jpg", 
             imgPathAndPrefix + "/" + code + "/paramedic-12.jpg"
           ],
           columns = 2
-%}
+%} -->
+
+<figure class="stack stack--two">
+  <div class="stack__item animateWrap">
+    <img src="{{imgPathAndPrefix + "/" + code + "/paramedic-11-animate.gif"}}" class="animateWrap__animateItem" style="width: 32%;height: auto;right: 5.4%;top: 9.3%;">
+    <img src="{{imgPathAndPrefix + "/" + code + "/paramedic-11.jpg"}}">
+  </div>
+  <img src="{{imgPathAndPrefix + "/" + code + "/paramedic-12.jpg"}}" class="stack__item">
+</figure>
 
 {% imgstack src = [
             imgPathAndPrefix + "/" + code + "/paramedic-13.jpg", 
