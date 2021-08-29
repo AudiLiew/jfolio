@@ -44,6 +44,15 @@ video {
   outline: 1px solid gray('200');
 }
 
+.animateWrap {
+  position: relative;
+  
+  &__animateItem {
+    position: absolute;
+  }
+}
+
+
 $mason: "mason";
 
 .mason {
