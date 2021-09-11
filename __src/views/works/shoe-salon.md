@@ -1,7 +1,7 @@
 ---
 title: 'Shoe Salon'
 projectType: 'Logo and Ads'
-projectIntro: 'This is intro Culpa voluptatem optio ipsam quisquam maxime nihil nisi reprehenderit nam labore quo animi, autem adipisci explicabo fugit exercitationem deserunt nobis minima magni tempora eum est aliquid. Reiciendis accusamus nam voluptatum dicta tenetur'
+projectIntro: 'Answering the call of luxury shoe lovers, The Shoe Salon carry brands such as <i>Manolo Blahnik, Jil Sander, Marc Jacobs, Kenzo,</i> and <i>Bruno Magli</i>.<br><br>The identity was designed to give a glimpse of what the brand is about and marketed with image-driven campaigns to express individuality, product personalities, and stories through art and style.'
 code: 'shoe-salon'
 permalink: /shoe-salon/ #false #
 date: 2020-02-04

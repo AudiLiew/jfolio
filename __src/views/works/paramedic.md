@@ -1,7 +1,7 @@
 ---
 title: "Paramedic Aesthetics"
 projectType: 'Rebranding'
-projectIntro: 'This is intro Culpa voluptatem optio ipsam quisquam maxime nihil nisi reprehenderit nam labore quo animi, autem adipisci explicabo fugit exercitationem deserunt nobis minima magni tempora eum est aliquid. Reiciendis accusamus nam voluptatum dicta tenetur'
+projectIntro: 'Paramedic Aesthetics provides semi-permanent makeup solutions for both men and women to wake up confident to face the day.<br><br>I was part of the rebranding process for Paramedic Aesthetics to stay current with the younger demographic. The rebranding process included a dynamic website that is not only informative, but allows customers to schedule their appointments. This also included namecards, paper bags, an aftercare booklet and installations in the salon to complete the flow of the rebranding.'
 code: 'paramedic'
 permalink: /paramedic/ #false #
 date: 2020-02-04

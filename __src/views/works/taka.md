@@ -1,7 +1,7 @@
 ---
 title: "Takashimaya"
 projectType: 'Selected works & campaigns'
-projectIntro: 'This is intro Culpa voluptatem optio ipsam quisquam maxime nihil nisi reprehenderit nam labore quo animi, autem adipisci explicabo fugit exercitationem deserunt nobis minima magni tempora eum est aliquid. Reiciendis accusamus nam voluptatum dicta tenetur'
+projectIntro: 'A Singaporean icon in its own right, the Japanese department store sits in the heart of Orchard Road. Staying true to the store’s image, I had the pleasure to work on campaigns throughout the year to celebrate key events, adapting it to the local market.'
 code: 'taka'
 permalink: /taka/ #false #
 date: 2020-02-04
@@ -29,7 +29,7 @@ eleventyNavigation:
             imgPathAndPrefix + "/" + code + "/taka-7.jpg", 
             imgPathAndPrefix + "/" + code + "/taka-8.jpg"
           ],
-          caption = "Chinese New Year campaign 2017 - Logo, mailer cover design, Launch Ad photography art direction, and red packets",
+          caption = "Chinese New Year campaign 2017 - Art direction for the campaign, photography, marketing collateral including logo, direct mailer and red packets",
           columns = 4,
           marginBottom = false
 %}
@@ -59,11 +59,11 @@ eleventyNavigation:
             imgPathAndPrefix + "/" + code + "/taka-17.jpg", 
             imgPathAndPrefix + "/" + code + "/taka-18.jpg"
           ],
-          caption = "2016 Mid-autmn ad design, logo, and photography art direction",
+          caption = "Mid-Autumn 2016 - Art direction, photography, logo, and ad design",
           columns = 2
 %}
 
-{% img src=imgPathAndPrefix + "/" + code + "/taka-19.jpg", caption="Selected newspaper ads - photography art direction and layout", marginBottom=false %}
+{% img src=imgPathAndPrefix + "/" + code + "/taka-19.jpg", caption="Selected newspaper Advertising - Art direction, photography and layout.", marginBottom=false %}
 
 {% imgstack src = [
             imgPathAndPrefix + "/" + code + "/taka-20.jpg", 
@@ -90,11 +90,11 @@ eleventyNavigation:
             imgPathAndPrefix + "/" + code + "/taka-28.jpg", 
             imgPathAndPrefix + "/" + code + "/taka-29.jpg"
           ],
-          caption = "2012 Spring beauty and Autumn beauty mailers - photography art direction and layout",
+          caption = "Spring Beauty 2012 and Autumn Beauty 2012 mailers - Art direction, photography, and layout.",
           columns = 2
 %}
 
-{% img src=imgPathAndPrefix + "/" + code + "/taka-30.jpg", caption="2011 Christmas mailer - Cover design, layout, and photography art direction", marginBottom=false %}
+{% img src=imgPathAndPrefix + "/" + code + "/taka-30.jpg", caption="Christmas 2011 hamper mailer - Art direction, photography, cover design, and layout", marginBottom=false %}
 {% img src=imgPathAndPrefix + "/" + code + "/taka-31.jpg", caption="", border = true, marginBottom=false %}
 {% img src=imgPathAndPrefix + "/" + code + "/taka-32.jpg", caption="", border = true, marginBottom=false %}
 {% img src=imgPathAndPrefix + "/" + code + "/taka-33.jpg", caption="", border = true %}
