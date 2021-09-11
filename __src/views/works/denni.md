@@ -1,7 +1,7 @@
 ---
 title: 'Denni'
 projectType: 'Corporate Identity'
-projectIntro: 'This is intro Culpa voluptatem optio ipsam quisquam maxime nihil nisi reprehenderit nam labore quo animi, autem adipisci explicabo fugit exercitationem deserunt nobis minima magni tempora eum est aliquid. Reiciendis accusamus nam voluptatum dicta tenetur'
+projectIntro: 'Established in 1982, Danni is a fashion accessories brand with 100 stores in markets across Asia, USA, and Spain. To reinvigorate and stay relevant with consumers, Danni expanded their brand portfolio and modernised their product offerings to appeal to a younger demographic. To reflect this change, I conceptualised what the consumers see, moving towards a polished and clean outlook to the brand.'
 code: 'denni'
 permalink: /denni/ #false #
 date: 2020-02-04
@@ -17,7 +17,7 @@ changefreq: monthly
 ---
 {% set imgPathAndPrefix = site.path.img | url %}
 
-{% img src=imgPathAndPrefix + "/" + code + "/denni-1.jpg", caption="Denni Corporate Identity - Concept, layout, and photography art direction", marginBottom=false %}
+{% img src=imgPathAndPrefix + "/" + code + "/denni-1.jpg", caption="Denni Corporate Profile - Concept, art direction, layout, and photography", marginBottom=false %}
 {% img src=imgPathAndPrefix + "/" + code + "/denni-2.jpg", caption="", marginBottom=false %}
 {% img src=imgPathAndPrefix + "/" + code + "/denni-3.jpg", caption="" %}
 

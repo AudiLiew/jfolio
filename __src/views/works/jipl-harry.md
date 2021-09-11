@@ -1,7 +1,7 @@
 ---
 title: 'Japan IPL Express (Calendar)'
 projectType: 'Where’s Harry 2019 Calendar'
-projectIntro: 'This is intro Culpa voluptatem optio ipsam quisquam maxime nihil nisi reprehenderit nam labore quo animi, autem adipisci explicabo fugit exercitationem deserunt nobis minima magni tempora eum est aliquid. Reiciendis accusamus nam voluptatum dicta tenetur'
+projectIntro: 'Japan IPL Express is a unisex hair removal salon using Intense Pulsed Light systems. They set themselves apart in the market by having No Appointments, No Packages, staying true to their motto by being “Simply Different”.<br><br>Harry, the Gorilla - Japan IPL Express mascot takes centre stage in 2019 calendar design. Inspired by the childhood’s puzzle book, ‘Where’s Waldo/Wally?’, illustrated Harry is lurking in the background, like that unwanted hair that need zapping. The calendar was later adapted to a monthly game on social platforms to bridge the physical and digital in branding.'
 code: 'jipl-harry'
 permalink: /jipl-harry/ #false #
 date: 2020-02-04

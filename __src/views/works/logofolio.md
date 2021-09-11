@@ -1,7 +1,7 @@
 ---
 title: 'Logo Folio'
 projectType: 'Selected Logos'
-projectIntro: 'This is intro Culpa voluptatem optio ipsam quisquam maxime nihil nisi reprehenderit nam labore quo animi, autem adipisci explicabo fugit exercitationem deserunt nobis minima magni tempora eum est aliquid. Reiciendis accusamus nam voluptatum dicta tenetur'
+projectIntro: 'A collection of logos and logotype design for various branding projects.'
 code: 'logofolio'
 permalink: /logofolio/ #false #
 date: 2020-02-04

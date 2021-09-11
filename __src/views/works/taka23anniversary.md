@@ -1,7 +1,7 @@
 ---
 title: 'Takashimaya Anniversary'
 projectType: '23rd Anniversary Campaign'
-projectIntro: 'This is intro Culpa voluptatem optio ipsam quisquam maxime nihil nisi reprehenderit nam labore quo animi, autem adipisci explicabo fugit exercitationem deserunt nobis minima magni tempora eum est aliquid. Reiciendis accusamus nam voluptatum dicta tenetur'
+projectIntro: 'A Singaporean icon in its own right, the Japanese department store sits it the heart of Orchard Road.<br><br>Two cultures, one celebration. To memorialise the diverse culture and heritage of both, the campaign saw the Singapore and Japanese skylines across merchandise, print and out-of-home advertising.'
 code: 'taka23anniversary'
 permalink: /taka23anniversary/ #false #
 date: 2020-02-04
