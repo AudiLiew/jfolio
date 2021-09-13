@@ -16,6 +16,7 @@ eleventyNavigation:
   order: 1
 ---
 {% set imgPathAndPrefix = site.path.img | url %}
+{% set vidPathAndPrefix = site.path.vid | url %}
 
 {% imgmason src = [
             imgPathAndPrefix + "/" + code + "/paramedic-1.jpg", 
@@ -51,7 +52,12 @@ eleventyNavigation:
     <img src="{{imgPathAndPrefix + "/" + code + "/paramedic-11-animate.gif"}}" class="animateWrap__animateItem" style="width: 32%;height: auto;right: 5.4%;top: 9.3%;">
     <img src="{{imgPathAndPrefix + "/" + code + "/paramedic-11.jpg"}}">
   </div>
-  <img src="{{imgPathAndPrefix + "/" + code + "/paramedic-12.jpg"}}" class="stack__item">
+  <div class="stack__item animateWrap">
+    <video class="animateWrap__animateItem" style="width: 65%;height: auto;    left: 5.4%; bottom: 12.5%; outline: none;" autoplay loop disablepictureinpicture>
+      <source src="{{vidPathAndPrefix + "/" + code + "/lash-donts.mp4"}}">
+    </video>
+    <img src="{{imgPathAndPrefix + "/" + code + "/paramedic-12.jpg"}}">
+  </div>
 </figure>
 
 {% imgstack src = [
