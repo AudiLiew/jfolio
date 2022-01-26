@@ -4,15 +4,13 @@
     display: grid;
     // grid-gap: 10%;
     grid-template-columns: repeat( auto-fill, minmax( 40%, 1fr ) );
-    grid-template-columns: 45% 45%;
-    column-gap: 10%;
-  }
-  
-  @include tablet {
-    row-gap: 1%;
-    grid-auto-rows: 320px;
-    grid-template-columns: 49% 49%;
-    column-gap: 2%;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 25px;
+
+    // row-gap: 1%;
+    row-gap: 30px;
+    // grid-auto-rows: 320px;
+    grid-auto-rows: minmax(300px, auto);
   }
 }
 
