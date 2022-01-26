@@ -60,6 +60,7 @@ module.exports = eleventyConfig => {
       {% vid src=site.path.vid + code + "/pmo-1.jpg", caption="Line drawing of the Istana - Used on stationery and PMO’s prepaid stamp", border=true %}
     */
    
+    let stackItemClass = (vid.stackItem == undefined) ? "" : " stack__item";
     let marginBottomClass = (vid.marginBottom == undefined) ? "" : " noMarginBottom";
     let borderClass = (vid.border == undefined) ? "" : (vid.border) ? "border" : "";
     let newFigure;
@@ -67,16 +68,16 @@ module.exports = eleventyConfig => {
 
     switch(vid.size) {
       case "short":
-        lengthClass = "isShort";
+        lengthClass = " isShort";
         break;
       case "medium":
-        lengthClass = "isMedium";
+        lengthClass = " isMedium";
         break;
       default:
         lengthClass = "";
     }
 
-    newFigure = '<figure class="'+ lengthClass + marginBottomClass +'">';  // default haz margin bottom
+    newFigure = '<figure class="'+ stackItemClass + lengthClass + marginBottomClass +'">';  // default haz margin bottom
 
     if (vid.caption != "") {
       newFigure += '<figcaption>' + vid.caption + '</figcaption>';
@@ -96,6 +97,7 @@ module.exports = eleventyConfig => {
       {% img src=site.path.img + code + "/pmo-1.jpg", caption="Line drawing of the Istana - Used on stationery and PMO’s prepaid stamp", border=true %}
     */
    
+    let stackItemClass = (img.stackItem == undefined) ? "" : " stack__item";
     let marginTopClass = (img.marginTop == undefined) ? "" : " noMarginTop";
     let marginBottomClass = (img.marginBottom == undefined) ? "" : " noMarginBottom";
     let borderClass = (img.border == undefined) ? "" : (img.border) ? "border" : "";
@@ -104,16 +106,16 @@ module.exports = eleventyConfig => {
 
     switch(img.size) {
       case "short":
-        lengthClass = "isShort";
+        lengthClass = " isShort";
         break;
       case "medium":
-        lengthClass = "isMedium";
+        lengthClass = " isMedium";
         break;
       default:
         lengthClass = "";
     }
 
-    newFigure = '<figure class="'+ lengthClass + marginBottomClass + marginTopClass +'">';  // default haz margin bottom
+    newFigure = '<figure class="'+ stackItemClass + lengthClass + marginBottomClass + marginTopClass +'">';  // default haz margin bottom
 
     if (img.caption != "") {
       newFigure += '<figcaption>' + img.caption + '</figcaption><img class="'+ borderClass+'" src="' + img.src + '">';
