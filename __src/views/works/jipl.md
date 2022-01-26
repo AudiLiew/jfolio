@@ -1,7 +1,7 @@
 ---
 title: 'Japan IPL Express'
 projectType: 'Marketing Collateral'
-projectIntro: 'This is intro Culpa voluptatem optio ipsam quisquam maxime nihil nisi reprehenderit nam labore quo animi, autem adipisci explicabo fugit exercitationem deserunt nobis minima magni tempora eum est aliquid. Reiciendis accusamus nam voluptatum dicta tenetur'
+projectIntro: 'Japan IPL Express is a unisex hair removal salon using Intense Pulsed Light systems. They set themselves apart in the market by having <i>No Appointments, No Packages</i>, staying true to their motto by being “Simply Different”.<br><br>This young beauty brand identifies itself by being hassle free and fun, connecting with their consumers with tongue-in-cheek humour, which transcends into their marketing collateral.'
 code: 'jipl'
 permalink: /jipl/ #false #
 date: 2020-02-04
@@ -18,9 +18,9 @@ changefreq: monthly
 {% set imgPathAndPrefix = site.path.img | url %}
 {% set vidPathAndPrefix = site.path.vid | url %}
 
-## Selected In-store Marketing Materials
+## Marketing Collateral
 
-{% img src=imgPathAndPrefix + "/" + code + "/jipl-1.jpg", caption="Marketing materials such as flyers, lucky draw cards, notebooks and calendars" %}
+{% img src=imgPathAndPrefix + "/" + code + "/jipl-1.jpg", caption="Notable designs included annual calendars, giftcards, stationary and Lunar New Year red packets." %}
 
 {% img src=imgPathAndPrefix + "/" + code + "/jipl-2.jpg", caption="2019 and 2020 red packets" %}
 
