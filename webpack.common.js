@@ -2,8 +2,6 @@ const webpack = require("webpack");
 const path = require("path");
 const CopyWebpackPlugin = require("copy-webpack-plugin");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
-const ImageminPlugin = require('imagemin-webpack-plugin').default;
-const imageminMozjpeg = require('imagemin-mozjpeg');
 
 module.exports = {
   entry: {
@@ -18,22 +16,39 @@ module.exports = {
     rules: [
       {
         test: /\.((eot)|(woff)|(woff2)|(ttf))(\?v=\d+\.\d+\.\d+)?$/,
-        loader: "file-loader?name=/[hash].[ext]"
+        use: {
+          loader: "file-loader?name=/[hash].[ext]"
+        }
       },
 
-      {test: /\.json$/, loader: "json-loader"},
+      {
+        test: /\.json$/,
+        use: {
+          loader: "json-loader"
+        }
+      },
 
       {
-        loader: "babel-loader",
         test: /\.js?$/,
         exclude: /node_modules/,
-        query: {cacheDirectory: true}
+        use: {
+          loader: "babel-loader",
+          options: {
+            cacheDirectory: true
+          }
+        }
       },
 
       {
         test: /\.(sa|sc|c)ss$/,
         exclude: /node_modules/,
-        use: ["style-loader", MiniCssExtractPlugin.loader, "css-loader", "postcss-loader", "sass-loader"]
+        use: [
+          "style-loader", 
+          // MiniCssExtractPlugin.loader, 
+          "css-loader", 
+          "postcss-loader", 
+          "sass-loader"
+        ]
       }
     ]
   },
@@ -43,49 +58,33 @@ module.exports = {
       fetch: "imports-loader?this=>global!exports-loader?global.fetch!whatwg-fetch"
     }),
 
-    new CopyWebpackPlugin([
-      {
-        context: '__src/assets',
-        from: 'img/**/*'
-      },
-      {
-        context: '__src/assets',
-        from: 'vid/**/*'
-      },
-      {
-        context: '.',
-        from: 'CNAME',
-        to: '../'
-      },
-      {
-        context: '.',
-        from: '.nojekyll',
-        to: '../'
-      },
-      {
-        context: '.',
-        from: 'robots.txt',
-        to: '../'
-      }
-    ]),
-
-    new ImageminPlugin({
-      test: /\.(jpe?g|png|gif|svg)$/i,
-      optipng: null,
-      pngquant: {
-        speed: 1,
-        quality: "75-100"
-      },
-      svgo: {
-        removeViewBox: false
-      },
-      plugins: [
-        imageminMozjpeg({
-          quality: 90,
-          progressive: true
-        })
+    new CopyWebpackPlugin({
+      patterns: [
+        {
+          context: '__src/assets',
+          from: 'img/**/*'
+        },
+        {
+          context: '__src/assets',
+          from: 'vid/**/*'
+        },
+        // {
+        //   context: '.',
+        //   from: 'CNAME',
+        //   to: '../'
+        // },
+        {
+          context: '.',
+          from: '.nojekyll',
+          to: '../'
+        },
+        {
+          context: '.',
+          from: 'robots.txt',
+          to: '../'
+        }
       ]
-    })
+    }),
 
     //new CopyWebpackPlugin([
     //  {
