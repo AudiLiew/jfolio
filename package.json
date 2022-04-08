@@ -9,7 +9,7 @@
     "start": "run-p start:**",
     "debug:11ty": "set DEBUG=*,-not_this && eleventy --config=eleventy.config.js --watch",
     "start:11ty": "eleventy --config=eleventy.config.js --watch",
-    "start:webpack": "webpack-dev-server --config webpack.dev.js --hot",
+    "start:webpack": "webpack-dev-server --config webpack.dev.js",
     "preview": "run-p preview:**",
     "preview:webpack": "npm run start:webpack",
     "clean": "rimraf docs",

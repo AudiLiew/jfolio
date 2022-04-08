@@ -1,4 +1,4 @@
-const merge = require("webpack-merge");
+const {merge} = require("webpack-merge");
 const path = require("path");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 
@@ -14,11 +14,14 @@ module.exports = merge(common, {
 
   devServer: {
     port: process.env.PORT || 8080,
-    contentBase: path.resolve(__dirname, './docs'),
-    publicPath: '/assets/',
-    watchContentBase: true,
-    quiet: false,
+    devMiddleware: {
+      publicPath: '/assets/'
+    },
+    static: {
+      directory: path.resolve(__dirname, './docs'),
+    },
     open: true,
+    hot: true,
     historyApiFallback: {
       rewrites: [{from: /./, to: "404.html"}]
     }
