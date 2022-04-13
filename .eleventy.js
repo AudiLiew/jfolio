@@ -20,7 +20,7 @@ module.exports = eleventyConfig => {
   
   // https://remysharp.com/2019/06/26/scheduled-and-draft-11ty-posts
   eleventyConfig.addCollection('works', collection => {
-    return collection.getFilteredByGlob('./__src/views/works/**/*.md')
+    return collection.getFilteredByGlob('./__src/works/**/*.md')
     .filter(livePosts).reverse();
   });
   
