@@ -41,6 +41,16 @@ module.exports = eleventyConfig => {
   // For sitemap
   eleventyConfig.addFilter("htmlDateDisplay", require("./__src/filters/timestamp.js"))
 
+
+  /* *********************************************************
+   * COPY ONLY
+   * *********************************************************
+   */
+  eleventyConfig.addPassthroughCopy('__src/robots.txt');
+  eleventyConfig.addPassthroughCopy('__src/.nojekyll');
+  eleventyConfig.addPassthroughCopy('__src/assets/img');
+  eleventyConfig.addPassthroughCopy('__src/assets/vid');
+
   /* *********************************************************
    * SHORTCODES
    * *********************************************************
@@ -280,7 +290,7 @@ module.exports = eleventyConfig => {
     htmlTemplateEngine: 'njk',
 
     dir: {
-      input: '__src/views',
+      input: '__src',
       output: 'docs',
       includes: '_includes',
       data: '_data'

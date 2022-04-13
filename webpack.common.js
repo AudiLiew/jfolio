@@ -55,42 +55,6 @@ module.exports = {
   plugins: [
     new webpack.ProvidePlugin({
       fetch: "imports-loader?this=>global!exports-loader?global.fetch!whatwg-fetch"
-    }),
-
-    new CopyWebpackPlugin({
-      patterns: [
-        {
-          context: '__src/assets',
-          from: 'img/**/*'
-        },
-        {
-          context: '__src/assets',
-          from: 'vid/**/*'
-        },
-        // {
-        //   context: '.',
-        //   from: 'CNAME',
-        //   to: '../'
-        // },
-        {
-          context: '.',
-          from: '.nojekyll',
-          to: '../'
-        },
-        {
-          context: '.',
-          from: 'robots.txt',
-          to: '../'
-        }
-      ]
-    }),
-
-    //new CopyWebpackPlugin([
-    //  {
-    //    from: "./src/fonts/",
-    //    to: "fonts/",
-    //    flatten: true
-    //  }
-    //])
+    })
   ]
 };
