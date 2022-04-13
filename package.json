@@ -5,18 +5,13 @@
   "private": true,
   "author": "Audi Liew",
   "scripts": {
-    "lint": "eslint __src",
-    "start": "run-p start:**",
-    "debug:11ty": "set DEBUG=*,-not_this && eleventy --watch",
-    "start:11ty": "eleventy --watch",
-    "start:webpack": "webpack-dev-server --config webpack.dev.js",
-    "preview": "run-p preview:**",
-    "preview:webpack": "npm run start:webpack",
     "clean": "rimraf docs",
-    "build": "npm run build:webpack && npm run build:11ty",
-    "build:11ty": "cross-env ELEVENTY_ENV=production eleventy --pathprefix=jfolio",
-    "build:webpack": "cross-env NODE_ENV=production webpack --config webpack.prod.js",
-    "cleanbuild": "npm run clean && npm run build"
+    "start": "cross-env NODE_ENV=development npm-run-all -l clean --parallel start:*",
+    "start:11ty": "eleventy --serve",
+    "start:webpack": "webpack --watch",
+    "build": "cross-env NODE_ENV=production npm-run-all -l clean build:*",
+    "build:11ty": "eleventy --pathprefix=jfolio",
+    "build:webpack": "webpack"
   },
   "devDependencies": {
     "@11ty/eleventy": "^1.0.0",
