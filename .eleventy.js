@@ -1,7 +1,7 @@
 const eleventyNavigationPlugin = require("@11ty/eleventy-navigation");
 
 module.exports = eleventyConfig => {
-  // const htmlmin = require("html-minifier");
+  const htmlmin = require("html-minifier");
   const markdownIt = require("markdown-it");
   const markdownItAttrs = require('markdown-it-attrs');
   const options = {
@@ -269,13 +269,17 @@ module.exports = eleventyConfig => {
   
 
   // Minify HTML
-  /*
+  //*
   eleventyConfig.addTransform("htmlmin", function(content, outputPath) {
-    if( outputPath.endsWith(".html") ) {
+    if( outputPath.endsWith(".html") && process.env.NODE_ENV === 'production') {
       let minified = htmlmin.minify(content, {
-        useShortDoctype: true,
+        html5: true,
         removeComments: true,
-        collapseWhitespace: true
+        collapseWhitespace: true,
+        collapseBooleanAttributes: true,
+        removeRedundantAttributes: true,
+        removeScriptTypeAttributes: true,
+        removeStyleLinkTypeAttributes: true
       });
       return minified;
     }
