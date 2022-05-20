@@ -1,0 +1,30 @@
+---
+layout: default
+changefreq: weekly
+priority: 1
+meta_description: "This is the beginning of something beautiful"
+date: Last Modified
+body_class: "page-home"
+---
+{# <ul class="posts-list">
+{%- for post in collections.posts -%}
+  <li><img src="{{ site.path.img }}{{ post.data.code }}/preview.png"></li>
+  <li><a href="{{ post.url | url }}" class="posts-list__link">{{ post.data.title }}</a> <span class="posts-list__date">{{ post.data.date | dateDisplay }}</span></li>
+{%- endfor -%}
+</ul> #}
+
+<div class="container">
+  <div class="work-wrap">
+    {%- for post in collections.works -%}
+    <div class="work{% if post.data.is_short %} short{% endif %}">
+      <a href="{{ post.url | url }}" class="work__link">
+        <div class="work__preview"><img src="{{ site.path.img | url }}/{{ post.data.code }}/preview.jpg" alt="{{ post.data.title }} preview"></div>
+        <div class="work__textWrap">
+          <div class="work__title">{{ post.data.title }}</div>
+          <div class="work__type">{{ post.data.projectType }}</div>
+        </div>
+      </a>
+    </div>
+    {%- endfor -%}
+  </div>
+</div>
