@@ -17,7 +17,7 @@ module.exports = eleventyConfig => {
   
   let markdownLib = markdownIt(options).use(markdownItAttrs);
   eleventyConfig.setLibrary("md", markdownLib);
-  
+
   // https://remysharp.com/2019/06/26/scheduled-and-draft-11ty-posts
   eleventyConfig.addCollection('works', collection => {
     return collection.getFilteredByGlob('./__src/works/**/*.md')
@@ -71,6 +71,7 @@ module.exports = eleventyConfig => {
     */
    
     let stackItemClass = (vid.stackItem == undefined) ? "" : " stack__item";
+    let marginTopClass = (vid.marginTop == undefined) ? "" : " noMarginTop";
     let marginBottomClass = (vid.marginBottom == undefined) ? "" : " noMarginBottom";
     let borderClass = (vid.border == undefined) ? "" : (vid.border) ? "border" : "";
     let newFigure;
@@ -87,7 +88,7 @@ module.exports = eleventyConfig => {
         lengthClass = "";
     }
 
-    newFigure = '<figure class="'+ stackItemClass + lengthClass + marginBottomClass +'">';  // default haz margin bottom
+    newFigure = '<figure class="'+ stackItemClass + lengthClass + marginBottomClass + marginTopClass +'">';  // default haz margin bottom
 
     if (vid.caption != "") {
       newFigure += '<figcaption>' + vid.caption + '</figcaption>';
