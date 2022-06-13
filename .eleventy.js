@@ -18,6 +18,14 @@ module.exports = eleventyConfig => {
   let markdownLib = markdownIt(options).use(markdownItAttrs);
   eleventyConfig.setLibrary("md", markdownLib);
 
+  // Override Default BrowserSync options
+  // For 11ty v1
+  eleventyConfig.setBrowserSyncConfig({
+    "online": false,
+    "open": false,
+    "port": 1099,
+  });
+  
   // https://remysharp.com/2019/06/26/scheduled-and-draft-11ty-posts
   eleventyConfig.addCollection('works', collection => {
     return collection.getFilteredByGlob('./__src/works/**/*.md')
