@@ -25,4 +25,4 @@ changefreq: monthly
 {% vid src=vidPathAndPrefix + "/" + code + "/sb-3.mp4", caption="", marginTop=false, marginBottom=false %}
 {% img src=imgPathAndPrefix + "/" + code + "/sb-4.jpg", caption="", marginTop=false, marginBottom=false %}
 {% vid src=vidPathAndPrefix + "/" + code + "/sb-5.mp4", caption="", marginTop=false, marginBottom=false %}
-{% img src=imgPathAndPrefix + "/" + code + "/sb-6.jpg", caption="", marginTop=false, marginBottom=false %}
+{% img src=imgPathAndPrefix + "/" + code + "/sb-6.jpg", caption="", marginTop=false %}
