@@ -5,7 +5,15 @@
   font-weight: bold;
 
   a {
+    display: block;
+    width: 100px;
     color: $mainNavLink;
+    transition: width 500ms cubic-bezier(0, 0, 0.18, 1.03);
+
+    .mainHeader--pinned &,
+    .mainHeader--unpinned & {
+      width: 50px;
+    }
 
     &:hover {
       text-decoration: none;
@@ -60,6 +68,7 @@
   margin: 0;
   padding: 0;
   list-style: none;
+  transform: translateY(-3px);
   
   &__item {
     //margin-left: 1rem;
