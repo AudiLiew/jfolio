@@ -9,8 +9,10 @@ const compressedPath = "assets/img/";
 const OPTIONS = {
     MaxWidth: 1920,
     DontEnlarge: true
-}
-let createdFolder = []
+};
+
+const PROCESSING_TYPE = [".png", ".jpg", ".jpeg", ".gif"];
+let createdFolder = [];
 
 fs.mkdirSync(compressedPath, { recursive: true });
 createdFolder.push(compressedPath);
@@ -21,26 +23,40 @@ glob(uncompressedFolder+"**/*.*", {}, function (err, files) {
   
   files.forEach(function(inputFile) {
     const outputFilename = path.join(compressedPath, inputFile.replace(uncompressedFolder, ""));
-    const outputFolder = path.dirname(outputFilename);
+    const {dir: outputFolder, ext: fileType} = path.parse(outputFilename);
 
     if (!createdFolder.includes(outputFolder)) {
       fs.mkdirSync(outputFolder, { recursive: true });
       createdFolder.push(outputFolder);
     }
 
-    sharp(inputFile)
-      .resize({
-        width: OPTIONS.MaxWidth,
-        withoutEnlargement: OPTIONS.DontEnlarge
-        })
-      .toFile(outputFilename, (err) => {
-        if (err !== null) {console.log(err);}
+    if(PROCESSING_TYPE.includes(fileType)) {
+      sharp(inputFile)
+        .resize({
+          width: OPTIONS.MaxWidth,
+          withoutEnlargement: OPTIONS.DontEnlarge
+          })
+        .toFile(outputFilename, (err) => {
+          if (err !== null) {console.log(err);}
+        });
+
+      if (SHOW_LOG) {
+        console.log(`Compressed to: ${outputFilename}`);
+      }
+    } else {
+      fs.copyFile(inputFile, outputFilename, (err) => {
+        if (err) throw err;
       });
-    
-    if (SHOW_LOG) {
-      console.log(`Output to: ${outputFilename}`);
+
+      if (SHOW_LOG) {
+        console.log(`Copied to: ${outputFilename}`);
+      }
     }
+
+    
   });
 
-  console.log(`Total ${files.length} files compressed.`);
+  if (SHOW_LOG) {
+    console.log(`Total ${files.length} files compressed.`);
+  }
 });
