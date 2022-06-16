@@ -56,6 +56,7 @@ module.exports = eleventyConfig => {
    */
   eleventyConfig.addPassthroughCopy('__src/robots.txt');
   eleventyConfig.addPassthroughCopy('__src/.nojekyll');
+  eleventyConfig.addPassthroughCopy('__src/CNAME');
   eleventyConfig.addPassthroughCopy('__src/assets/img');
   eleventyConfig.addPassthroughCopy('__src/assets/vid');
 
