@@ -10,7 +10,7 @@
     "start:11ty": "eleventy --serve",
     "start:webpack": "webpack --watch",
     "build": "cross-env NODE_ENV=production npm-run-all -l clean build:*",
-    "build:11ty": "eleventy --pathprefix=jfolio",
+    "build:11ty": "eleventy",
     "build:webpack": "webpack"
   },
   "devDependencies": {
