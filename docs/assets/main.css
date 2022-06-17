@@ -256,7 +256,7 @@ sup {
   margin: 0;
   padding: 0;
   list-style: none;
-  line-height: 1.3rem; }
+  line-height: 1.2rem; }
 
 .navbar-dropdown a {
     display: block; }
@@ -279,7 +279,6 @@ sup {
       opacity: 0;
       background-color: #fff;
       font-size: 0.9rem;
-      line-height: 1rem;
       -webkit-transform: translateY(-12px);
               transform: translateY(-12px);
       transition: all .1s ease;
@@ -292,7 +291,7 @@ sup {
         transition-delay: 0; }
       .navbar-dropdown li {
         margin-bottom: 0;
-        padding: .3rem 1rem; }
+        padding: .1rem 1rem; }
       .navbar-dropdown a:hover {
         color: #20c997; } }
 
