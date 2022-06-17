@@ -1,12 +1,12 @@
 const eleventyNavigationPlugin = require("@11ty/eleventy-navigation");
-
 const filters = require('./utils/filters');
 const collections = require('./utils/collections');
+const tranforms = require('./utils/transforms');
 const shortcodes = require('./utils/shortcodes');
 const nunjucks_shortcodes = require('./utils/nunjucks_shortcodes');
 
 module.exports = eleventyConfig => {
-  const htmlmin = require("html-minifier");
+  
   const markdownIt = require("markdown-it");
   const markdownItAttrs = require('markdown-it-attrs');
   const options = {
@@ -64,7 +64,7 @@ module.exports = eleventyConfig => {
   eleventyConfig.addPassthroughCopy('__src/assets/img');
   eleventyConfig.addPassthroughCopy('__src/assets/vid');
 
-  
+
   /* *********************************************************
    * SHORTCODES
    * *********************************************************
@@ -77,25 +77,13 @@ module.exports = eleventyConfig => {
     eleventyConfig.addNunjucksShortcode(key, nunjucks_shortcodes[key]);
   });
 
-  // Minify HTML
-  //*
-  eleventyConfig.addTransform("htmlmin", function(content, outputPath) {
-    if( outputPath.endsWith(".html") && process.env.NODE_ENV === 'production') {
-      let minified = htmlmin.minify(content, {
-        html5: true,
-        removeComments: true,
-        collapseWhitespace: true,
-        collapseBooleanAttributes: true,
-        removeRedundantAttributes: true,
-        removeScriptTypeAttributes: true,
-        removeStyleLinkTypeAttributes: true
-      });
-      return minified;
-    }
-
-    return content;
+  /* *********************************************************
+   * TRANFORMS
+   * *********************************************************
+   */
+  Object.keys(tranforms).forEach((key) => {
+    eleventyConfig.addTransform(key, tranforms[key]);
   });
-  // */
 
   return {
     templateFormats: ["njk", "md"],
