@@ -156,7 +156,7 @@
   margin: 0;
   padding: 0;
   list-style: none;
-  line-height: 1.3rem;
+  line-height: 1.2rem;
 
   a {
     display: block;
@@ -183,7 +183,7 @@
     background-color: $mainNavDropDownMenu;
     // line-height: 1.4rem;
     font-size: 0.9rem;
-    line-height: 1rem;
+    // line-height: 1rem;
     
     transform: translateY(-12px);
     transition: all .1s ease;
@@ -202,7 +202,7 @@
 
     li {
       margin-bottom: 0;
-      padding: .3rem 1rem;
+      padding: .1rem 1rem;
     }
 
     a {     
