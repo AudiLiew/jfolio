@@ -31,7 +31,18 @@ module.exports = eleventyConfig => {
     return collection.getFilteredByGlob('./__src/works/**/*.md')
     .filter(livePosts).reverse();
   });
-  
+
+  // https://github.com/11ty/eleventy/issues/411
+  eleventyConfig.addCollection('worksAlphabetSorted', collection => {
+    return collection.getFilteredByGlob('./__src/works/**/*.md').sort((a, b) => {
+      const titleA = a.data.title.toUpperCase();
+      const titleB = b.data.title.toUpperCase();
+      if (titleA > titleB) return 1
+      if (titleA < titleB) return -1
+      return 0
+    })
+  });
+
   eleventyConfig.addPlugin(eleventyNavigationPlugin);
 
   // Layout aliases
