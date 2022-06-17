@@ -28,12 +28,14 @@
 }
  
 .navbar-burger {
+  
   @include size(40px, 60px);
   z-index: 1000;
   cursor: pointer;
   display: flex;
   align-items: center;
   justify-content: flex-end;
+  transform: translateY(-18px);
 
   @include tablet {
     display: none;

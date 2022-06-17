@@ -165,7 +165,9 @@ sup {
   display: -ms-flexbox;
   display: flex;
   align-items: center;
-  justify-content: flex-end; }
+  justify-content: flex-end;
+  -webkit-transform: translateY(-18px);
+          transform: translateY(-18px); }
 
 @media screen and (min-width: 769px), print {
     .navbar-burger {
