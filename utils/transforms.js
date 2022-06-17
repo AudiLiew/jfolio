@@ -1,7 +1,8 @@
 const htmlmin = require("html-minifier");
 
-module.exports = {// Minify HTML
+module.exports = {
     htmlmin: (content, outputPath) => {
+        // Minify HTML
         if (outputPath.endsWith(".html") && process.env.NODE_ENV === 'production') {
             const minified = htmlmin.minify(content, {
                 html5: true,
