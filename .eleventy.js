@@ -1,5 +1,7 @@
 const eleventyNavigationPlugin = require("@11ty/eleventy-navigation");
 
+const filters = require('./utils/filters');
+
 module.exports = eleventyConfig => {
   const htmlmin = require("html-minifier");
   const markdownIt = require("markdown-it");
@@ -53,12 +55,9 @@ module.exports = eleventyConfig => {
    * FILTERS
    * *********************************************************
    */
-  // Add a readable date formatter filter to Nunjucks
-  eleventyConfig.addFilter("dateDisplay", require("./__src/filters/dates.js"))
-
-  // Add a HTML timestamp formatter filter to Nunjucks
-  // For sitemap
-  eleventyConfig.addFilter("htmlDateDisplay", require("./__src/filters/timestamp.js"))
+  Object.keys(filters).forEach((key) => {
+    eleventyConfig.addFilter(key, filters[key]);
+  });
 
 
   /* *********************************************************
