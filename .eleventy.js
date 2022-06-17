@@ -2,6 +2,7 @@ const eleventyNavigationPlugin = require("@11ty/eleventy-navigation");
 
 const filters = require('./utils/filters');
 const collections = require('./utils/collections');
+const shortcodes = require('./utils/shortcodes');
 
 module.exports = eleventyConfig => {
   const htmlmin = require("html-minifier");
@@ -66,10 +67,8 @@ module.exports = eleventyConfig => {
    * SHORTCODES
    * *********************************************************
    */
-  
-  // Shortcode for External links
-  eleventyConfig.addShortcode("extlink", (name, url) => {
-    return '<a href="'+ url +'" target="_blank" rel="noopener">'+ name +'</a>';
+  Object.keys(shortcodes).forEach((key) => {
+    eleventyConfig.addShortcode(key, shortcodes[key]);
   });
 
   // Shortcode for single video with captions
@@ -271,14 +270,6 @@ module.exports = eleventyConfig => {
     return newFigure;
   });
 
-  // Get year for copyright
-  eleventyConfig.addShortcode("showfullyear", (emptyVariableForThisToWork) => {
-    let nowNow = new Date();
-    let nowFullYear = nowNow.getFullYear();
-    return nowFullYear + emptyVariableForThisToWork;
-  });  
-
-  
 
   // Minify HTML
   //*
