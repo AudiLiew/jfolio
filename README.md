@@ -16,9 +16,9 @@ Jain's Folio
 # To Do
 
 ## Features
- - [ ] Compress src images
+ - [x] Compress src images
  - [ ] Lazy load images
  - [ ] Lazy play videos
 
 ## Fixes
- - [ ] Clean up 11ty config; separate shortcodes
+ - [x] Clean up 11ty config; separate shortcodes
