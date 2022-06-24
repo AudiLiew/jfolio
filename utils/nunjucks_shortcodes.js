@@ -34,6 +34,48 @@ module.exports = {
 
         return newFigure;
     },
+    vidstack: (vidstack) => {
+
+        const stackName = "stack";
+        const stackItemName = stackName + "__item";
+        let marginClass = "";
+        let borderClass = (vidstack.border == undefined) ? "" : (vidstack.border) ? " border" : "";
+        let newFigure, columnClass = stackName + " " + stackName;
+
+        switch (vidstack.columns) {
+            case 4:
+                columnClass += "--four";
+                break;
+            case 3:
+                columnClass += "--three";
+                break;
+            case 2:
+            default:
+                columnClass += "--two";
+        }
+
+        if (vidstack.marginTop != undefined && !vidstack.marginTop) {
+            marginClass += " noMarginTop"
+        }
+
+        if (vidstack.marginBottom != undefined && !vidstack.marginBottom) {
+            marginClass += " noMarginBottom"
+        }
+
+        newFigure = '<figure class="' + columnClass + marginClass + '">';  // default haz margin bottom
+
+        if (vidstack.caption != undefined) {
+            newFigure += '<figcaption>' + vidstack.caption + '</figcaption>';
+        }
+
+        for (vid of vidstack.src) {
+            newFigure += '<video controls width="100%" class="' + stackItemName + borderClass + '"><source src="' + vid + '" type="video/mp4"></video>';
+        }
+
+        newFigure += '</figure>';
+
+        return newFigure;
+    },
     img: (img) => {
         // Shortcode for single image with captions
         // Usage:
