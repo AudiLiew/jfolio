@@ -25,13 +25,7 @@ eleventyNavigation:
   {% vid src=vidPathAndPrefix + "/" + code + "/fab-4.mp4", stackItem=true, caption="" %}
 </div>
 
-{% img src=imgPathAndPrefix + "/" + code + "/fab-5.jpg", stackItem=true, marginBottom=false, caption="" %}
-
-<div class="stack stack--three">
-  {% img src=imgPathAndPrefix + "/" + code + "/fab-6.jpg", stackItem=true, caption="" %}
-  {% vid src=vidPathAndPrefix + "/" + code + "/fab-7.mp4", stackItem=true, caption="" %}
-  {% img src=imgPathAndPrefix + "/" + code + "/fab-8.jpg", stackItem=true, caption="" %}
-</div>
+{% img src=imgPathAndPrefix + "/" + code + "/fab-5.jpg", stackItem=true, caption="" %}
 
 <div class="stack stack--two">
   {% img src=imgPathAndPrefix + "/" + code + "/fab-9.jpg", stackItem=true, caption="" %}
@@ -46,13 +40,7 @@ eleventyNavigation:
   {% vid src=vidPathAndPrefix + "/" + code + "/fab-14.mp4", stackItem=true, caption="" %}
 </div>
 
-{% vid src=vidPathAndPrefix + "/" + code + "/fab-15.mp4", stackItem=true, marginBottom=false, caption="" %}
-
-<div class="stack stack--three">
-  {% vid src=vidPathAndPrefix + "/" + code + "/fab-16.mp4", stackItem=true, caption="" %}
-  {% vid src=vidPathAndPrefix + "/" + code + "/fab-17.mp4", stackItem=true, caption="" %}
-  {% vid src=vidPathAndPrefix + "/" + code + "/fab-18.mp4", stackItem=true, caption="" %}
-</div>
+{% vid src=vidPathAndPrefix + "/" + code + "/fab-15.mp4", stackItem=true, caption="" %}
 
 {% vid src=vidPathAndPrefix + "/" + code + "/fab-19.mp4", stackItem=true, caption="" %}
 
