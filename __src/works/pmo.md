@@ -1,7 +1,7 @@
 ---
 title: "Prime Minister’s Office"
 projectType: 'Invitation Cards'
-projectIntro: 'This is intro Culpa voluptatem optio ipsam quisquam maxime nihil nisi reprehenderit nam labore quo animi, autem adipisci explicabo fugit exercitationem deserunt nobis minima magni tempora eum est aliquid. Reiciendis accusamus nam voluptatum dicta tenetur'
+projectIntro: 'Once a year, the Prime Minister’s Office ushers the Lunar New Year with a reception at the Istana. Dignitaries, delegates and invitees will receive a specially designed invitation card to commemorate the event. I had the privilege to have my design selected for 2015 & 2016.'
 code: 'pmo'
 permalink: /pmo/ #false #
 date: 2020-02-04
