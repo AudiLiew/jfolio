@@ -5,7 +5,7 @@ Jain's Folio
 1 Create Branch
 2 run *npm start*
 3 Once ok, merge to master
-4 run *npm run build*
+4 run *npm run build* (compresses html and webpack properly)
 
 # Image Compression
 
@@ -17,8 +17,10 @@ Jain's Folio
 
 ## Features
  - [x] Compress src images
+ - [ ] https
  - [ ] Lazy load images
  - [ ] Lazy play videos
+ - [ ] Mix img/vid stack shortcode
 
 ## Fixes
  - [x] Clean up 11ty config; separate shortcodes
