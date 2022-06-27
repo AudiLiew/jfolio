@@ -1,8 +1,8 @@
 {
   "name": "JL Folio",
   "description": "Jain Lo’s Portfolio site",
-  "url": "http://www.jainl.com",
-  "domain": "http://www.jainl.com",
+  "url": "https://jainl.com",
+  "domain": "https://jainl.com",
   "home": "/",
   "author": {
     "name": "JL"
