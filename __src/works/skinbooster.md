@@ -1,7 +1,7 @@
 ---
 title: 'Skinbooster'
 projectType: 'Brand Identity'
-projectIntro: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestiae quia modi corrupti ullam magnam dolorum tenetur numquam beatae nostrum a. Voluptatum sed ratione corrupti dolor eaque sapiente recusandae rem eum.'
+projectIntro: "Skinbooster was designed to complement Japan IPL’s hair removal service. The brand identity of simplicity is reflected with minimalistic design elements to bring focus to the product, and simple illustrations overlayed to enchance the concept that skin is \"boosted\". The colour scheme selected was to run parallel to Japan IPL’s style guide.<br><br>The concept behind the product is to give skin an extra boost of hydration is examplified with elements of water to invoke feelings of quenching thrist and soothing parched skin."
 code: 'skinbooster'
 permalink: /skinbooster/ #false #
 date: 2022-06-13
