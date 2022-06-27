@@ -4,7 +4,7 @@ projectType: "Social Media Content and Advertising"
 projectIntro: "Fabulous Aesthetics is an award-winning beauty and wellness brand that is committed to empowering men and women with the confidence that beauty provides. <br><br>As traditional salons had to digitally transform to stay relevant, I relied on visual metaphors to be a thumb-stopper on social for the brand. Images used for advertising campaign were successful in getting the message across at the same time meeting Facebook's strict advertising policies on beauty campaigns."
 code: 'fabulous'
 permalink: /fabulous/ #false #
-date: 2020-01-04
+date: 2020-05-04
 heroImg: 'hero.jpg'
 #mod_date: 2020-01-01
 is_short: true
