@@ -4,7 +4,7 @@ projectType: 'Invitation Cards'
 projectIntro: 'Once a year, the Prime Minister’s Office ushers the Lunar New Year with a reception at the Istana. Dignitaries, delegates and invitees will receive a specially designed invitation card to commemorate the event. I had the privilege to have my design selected for 2015 & 2016.'
 code: 'pmo'
 permalink: /pmo/ #false #
-date: 2020-02-04
+date: 2020-08-04
 heroImg: 'hero.jpg'
 #mod_date: 2020-01-01
 is_short: true
