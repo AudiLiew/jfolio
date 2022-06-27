@@ -21,7 +21,10 @@
     display: flex;
     justify-content: center;
     flex-direction: column;
-  }
+
+    a {
+      width: 70px;
+    }  }
 }
  
 .navbar-burger {

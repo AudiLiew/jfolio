@@ -33,6 +33,7 @@ import Rellax from "rellax";
     mainNavToggle: document.querySelector("#" + NAMES.mainNavToggle),
     mainNavDropdown: document.querySelectorAll("." + NAMES.mainNavLinks + "." + NAMES.mainnavDropown),
     mainNavDropdownToggle: document.querySelectorAll("[data-toggle='" + NAMES.dropdownToggle +"']"),
+    videos: document.querySelectorAll("video"),
   };
 
   const STATE = { 
@@ -196,10 +197,36 @@ import Rellax from "rellax";
     });
   };
 
+  const setupVideoObservers = () => {
+    if (DOM.videos.length == 0 || DOM.videos.length == undefined) return;
+    if(!window.IntersectionObserver) return;
+
+    const observer = new IntersectionObserver((entries, observer) => { 
+      entries.forEach(entry => {
+        if(entry.isIntersecting){
+          try {
+            entry.target.play();
+          } catch (error) {
+            console.error(error);
+          }
+        } else if (entry.intersectionRatio!=1) {
+          try {
+            entry.target.pause();
+          } catch (error) {
+            console.error(error);
+          }
+        }
+      });
+    }, {rootMargin: "0px 0px -100px 0px"});
+
+    DOM.videos.forEach(vid => { observer.observe(vid) });
+  };
+
   const Init = () => {
     terminal('🚀App:init');
     terminal('MODE: ' + process.env.NODE_ENV);
     setupListeners();
+    setupVideoObservers();
 
     ////////////////
     //
