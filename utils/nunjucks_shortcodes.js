@@ -30,7 +30,7 @@ module.exports = {
             newFigure += '<figcaption>' + vid.caption + '</figcaption>';
         }
 
-        newFigure += '<video muted loop width="100%" class="' + borderClass + '"><source src="' + vid.src + '" type="video/mp4"></video></figure>';
+        newFigure += '<video playsinline muted loop width="100%" class="' + borderClass + '"><source src="' + vid.src + '" type="video/mp4"></video></figure>';
 
         return newFigure;
     },
@@ -69,7 +69,7 @@ module.exports = {
         }
 
         for (vid of vidstack.src) {
-            newFigure += '<video muted loop width="100%" class="' + stackItemName + borderClass + '"><source src="' + vid + '" type="video/mp4"></video>';
+            newFigure += '<video playsinline muted loop width="100%" class="' + stackItemName + borderClass + '"><source src="' + vid + '" type="video/mp4"></video>';
         }
 
         newFigure += '</figure>';
