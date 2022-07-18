@@ -1,15 +1,15 @@
 ---
-title: 'Japan IPL Express (2017-2019)'
-projectType: 'Marketing Collateral'
-projectIntro: 'Graduating from flat vector illustration styling, Japan IPL’s 2017-2019 art direction includes the use of secondary colours and patterns to echo energy, vibrancy and fun.<br><br>The design elements I chose for the transition wraps the quirk and humour of the brand’s mascot, <i>Harry</i>, who is always in a less than ideal situation, as he himself is hairy but represents a brand that strives to give customers smooth skin.'
-code: 'jipl_17_19'
-permalink: /jipl_17_19/ #false #
+title: 'Japan IPL Express (2019)'
+projectType: 'Art Direction and works'
+projectIntro: 'Graduating from flat vector illustration styling, Japan IPL’s 2019 art direction includes the use of secondary colours and patterns to echo energy, vibrancy and fun.<br><br>The design elements I chose for the transition wraps the quirk and humour of the brand’s mascot, <i>Harry</i>, who is always in a less than ideal situation, as he himself is hairy but represents a brand that strives to give customers smooth skin.'
+code: 'jipl_19'
+permalink: /jipl_19/ #false #
 date: 2022-02-10
 heroImg: 'hero.jpg'
 #mod_date: 2020-01-01
 is_short: true
 eleventyNavigation:
-  key: Japan IPL Express (17-19)
+  key: Japan IPL Express (2019)
   order: 1
 tags: 
   - identity
@@ -18,9 +18,7 @@ changefreq: monthly
 {% set imgPathAndPrefix = site.path.img | url %}
 {% set vidPathAndPrefix = site.path.vid | url %}
 
-## Copy
-
-{% img src=imgPathAndPrefix + "/" + code + "/" + code + "-1.jpg", caption="Style guide for the year of 2020", marginBottom=false %}
+{% img src=imgPathAndPrefix + "/" + code + "/" + code + "-1.jpg", caption="Style guide for the year of 2019", marginBottom=false %}
 
 {% imgstack src = [
     imgPathAndPrefix + "/" + code + "/" + code + "-2.jpg",
