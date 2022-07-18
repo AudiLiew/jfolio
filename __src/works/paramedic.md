@@ -1,6 +1,6 @@
 ---
 title: "Paramedic Aesthetics"
-projectType: 'Rebranding'
+projectType: 'Art Direction'
 projectIntro: 'Paramedic Aesthetics provides semi-permanent makeup solutions for both men and women to wake up confident to face the day.<br><br>I was part of the rebranding process for Paramedic Aesthetics to stay current with the younger demographic. The rebranding process included a dynamic website that is not only informative, but allows customers to schedule their appointments. This also included namecards, paper bags, an aftercare booklet and installations in the salon to complete the flow of the rebranding.'
 code: 'paramedic'
 permalink: /paramedic/ #false #
