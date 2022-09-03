@@ -4,7 +4,7 @@ projectType: 'Logo and Ads'
 projectIntro: 'Answering the call of luxury shoe lovers, The Shoe Salon carry brands such as <i>Manolo Blahnik, Jil Sander, Marc Jacobs, Kenzo,</i> and <i>Bruno Magli</i>.<br><br>The identity was designed to give a glimpse of what the brand is about and marketed with image-driven campaigns to express individuality, product personalities, and stories through art and style.'
 code: 'shoe-salon'
 permalink: /shoe-salon/ #false #
-date: 2021-02-04
+date: 2020-01-04
 heroImg: 'hero.jpg'
 #mod_date: 2020-01-01
 is_short: true

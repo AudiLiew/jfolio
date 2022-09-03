@@ -4,7 +4,7 @@ projectType: 'Marketing Collateral'
 projectIntro: 'Japan IPL Express is a unisex hair removal salon using Intense Pulsed Light systems. They set themselves apart in the market by having <i>No Appointments, No Packages</i>, staying true to their motto by being “Simply Different”.<br><br>This young beauty brand identifies itself by being hassle free and fun, connecting with their consumers with tongue-in-cheek humour, which transcends into their marketing collateral.'
 code: 'jipl'
 permalink: /jipl/ #false #
-date: 2022-01-03
+date: 2020-01-30
 heroImg: 'hero.jpg'
 #mod_date: 2020-01-01
 is_short: true

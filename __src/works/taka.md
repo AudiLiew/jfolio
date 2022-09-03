@@ -4,7 +4,7 @@ projectType: 'Selected works & campaigns'
 projectIntro: 'A Singaporean icon in its own right, the Japanese department store sits in the heart of Orchard Road. Staying true to the store’s image, I had the pleasure to work on campaigns throughout the year to celebrate key events, adapting it to the local market.'
 code: 'taka'
 permalink: /taka/ #false #
-date: 2021-02-04
+date: 2022-07-04
 heroImg: 'hero.jpg'
 #mod_date: 2020-01-01
 is_short: true

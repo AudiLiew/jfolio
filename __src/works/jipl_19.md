@@ -4,7 +4,7 @@ projectType: 'Art Direction and works'
 projectIntro: 'Graduating from flat vector illustration styling, Japan IPL’s 2019 art direction includes the use of secondary colours and patterns to echo energy, vibrancy and fun.<br><br>The design elements I chose for the transition wraps the quirk and humour of the brand’s mascot, <i>Harry</i>, who is always in a less than ideal situation, as he himself is hairy but represents a brand that strives to give customers smooth skin.'
 code: 'jipl_19'
 permalink: /jipl_19/ #false #
-date: 2022-02-10
+date: 2020-01-20
 heroImg: 'hero.jpg'
 #mod_date: 2020-01-01
 is_short: true
